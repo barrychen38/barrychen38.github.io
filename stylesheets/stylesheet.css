@@ -114,22 +114,18 @@ footer {
 
 #gotop {
     text-decoration: none;
-    color: #fff;
     position: fixed;
     right: 40px;
     bottom: 50px;
     display: block;
-    width: 48px;
-    height: 48px;
-    border-radius: 40px;
-    line-height: 48px;
-    background: #1e6bb8;
-    text-align: center;
-    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    background: url(../images/up.png) center center no-repeat;
 	display: none;
 }
 
 #gotop:hover {
     text-decoration: none;
+    background: url(../images/up_hover.png) center center no-repeat;
     color: #fff;
 }
