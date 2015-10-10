@@ -120,12 +120,12 @@ footer {
     display: block;
     width: 36px;
     height: 36px;
-    background: url(../images/up.png) center center no-repeat;
+    background: url(../img/up.png) center center no-repeat;
 	display: none;
 }
 
 #gotop:hover {
     text-decoration: none;
-    background: url(../images/up_hover.png) center center no-repeat;
+    background: url(../img/up_hover.png) center center no-repeat;
     color: #fff;
 }
