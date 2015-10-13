@@ -39,7 +39,7 @@ function waterfall(parent, child) {
         if (i < 5) {
             hArr[i] = boxH;
         } else {
-            var minHeight = Math.min.apply(null, hArr);console.log(minHeight);
+            var minHeight = Math.min.apply(null, hArr);
             var minIndex = getMinIndex(hArr, minHeight);
             boxsH[i].style.position = "absolute";
             boxsH[i].style.top = minHeight + 'px';
