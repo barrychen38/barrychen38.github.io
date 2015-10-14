@@ -14,20 +14,27 @@ $(document).ready(function() {
 	    }, 400);
 	});
 	// show and hide
-	var show_hide = $(".menubar .menulist, .menubar span");
-	$(".more").hover(function(e) {
-		var ev = e.target;
-		if (ev) {
-			setTimeout(function() {
-				show_hide.fadeIn(300);
-			}, 500);
-		}
+	var show_hide = $(".menubar .menulist, .menubar span"),
+		timer;
+	$(".more").hover(function() {
+		clearTimeout(timer);
+		timer = setTimeout(function() {
+			show_hide.fadeIn(200);
+		}, 300);
 	}, function() {
-		setTimeout(function() {
-			show_hide.fadeOut(300);
-		}, 1000);
+		clearTimeout(timer);
+		show_hide.hover(function(){
+			show_hide.show();
+			clearTimeout(timer);
+		}, function() {
+			setTimeout(function() {
+				show_hide.fadeOut(200);
+			}, 500);	
+		});
+		timer = setTimeout(function() {
+			show_hide.fadeOut(200);
+		}, 500);
 	});
-
 	// show_hide QRCode
 	$("#wechat").click(function() {
 		$(".wechat_QRCode").animate({
