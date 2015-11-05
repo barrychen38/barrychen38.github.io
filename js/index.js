@@ -5,11 +5,35 @@ var getId = function(id) {
 window.onload = function() {
     // waterfall
     waterfall('main', 'box');
+
+    // cour figure
+    var conTrols = getCla("cour", "cour_ctrl")[0].getElementsByTagName('li'),
+        courImgs = getCla("cour", "cour_img")[0].getElementsByTagName('a'),
+        ctrlLen = conTrols.length,
+        opacity = 1;
+    for (var i = 0; i < ctrlLen; i++) {
+        conTrols[i].save = i;
+        conTrols[i].onclick = function() {
+            for (var j = 0; j < ctrlLen; j++) {
+                conTrols[j].className = "";
+            }
+            conTrols[this.save].className = "slide_on";
+            var timer = setTimeout(function() {
+                opacity -= 0.05;
+                if (opacity > 0) {
+                    courImgs[i].style.opacity = opacity;
+                } else {
+                    courImgs[i].style.opacity = 0;
+                    clearTimeout(timer);
+                }
+            }, 200);
+        }
+    };
 }
 
 function getCla(parent, claName) {
     var oParent = getId(parent),
-        oElements = oParent.getElementsByTagName('div'),
+        oElements = oParent.getElementsByTagName("*"),
         len = oElements.length,
         bArr = [];
     for (var i = 0; i < len; i++) {
@@ -30,7 +54,7 @@ function getMinIndex(arr, minH) {
 
 function waterfall(parent, child) {
     var hArr = [],
-        oParent = getId(parent);
+        oParent = getId(parent),
         boxsH = getCla(parent, child),
         len = boxsH.length,
         left = boxsH[0].offsetLeft;
@@ -46,8 +70,10 @@ function waterfall(parent, child) {
             boxsH[i].style.left = boxsH[minIndex].offsetLeft + 'px';
             hArr[minIndex] += boxsH[i].offsetHeight;
         }
-        if (boxsH[i].offsetLeft == left) {
-            boxsH[i].style.paddingLeft = 0;
+    }
+    for (var j = 0; j < len; j++) {
+        if (boxsH[j].offsetLeft == left) {
+            boxsH[j].style.paddingLeft = 0;
         }
     }
     var maxH = Math.max.apply(null, hArr);
