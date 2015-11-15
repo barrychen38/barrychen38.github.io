@@ -8,11 +8,13 @@
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #777;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 a:hover {
     text-decoration: none;
-    color: #777;
 }
 input, button {
     outline: none;
@@ -29,29 +31,18 @@ ul, ol {
     margin: 0;
     padding: 0;
 }
-@media only screen and (max-width: 767px) {
-    .about .me_img {
-        height: 160px;
-    }
-    .section_index .left,
-    .section_index .right {
-        width: 100%;
-    }
-    .section_index .left {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-    }
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
 }
-@media only screen and (max-width: 479px) {
-    .nav .menu li a {
-        padding: 4px 8px;
-    }
-    .about .me_img {
-        height: 120px;
-    }
-    .about .me {
-        width: 60px;
-        height: 60px;
-        top: -65px;
-    }
+::-moz-selection {
+    background: #81CC7A;
+    color: #fff;
+}
+::selection {
+    background: #81CC7A;
+    color: #fff;
 }
