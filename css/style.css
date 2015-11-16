@@ -15,9 +15,7 @@ body {
     top: 0;
     z-index: 99;
 }
-.nav .container {
-    background: none;
-}
+.nav .container {background: none;}
 .nav ul li a {
     display: block;
     float: left;
@@ -25,29 +23,32 @@ body {
     color: #fff;
 }
 .nav ul li a.pageon,
-.nav ul li a:hover {
-    background: #81CC7A;
-}
+.nav ul li a:hover {background: #81CC7A;}
 /* share */
 .article {
     background: #fff;
-    padding: 12px;
+    padding: 16px;
     margin-bottom: 20px;
 }
-#date, .info {
-    font-size: 13px;
-}
-.title {
-    display: block;
-    margin: 12px 0;
-    font-size: 20px;
-}
+#date {margin-bottom: 12px;}
+.info {margin-top: 12px;}
+#date, .info {font-size: 13px;}
+.title {font-size: 20px;}
 .detail {
     font-size: 14px;
     margin-top: 12px;
     color: #999;
 }
-/* me */
+.text {color: #999;}
+/* about */
+.about {margin-bottom: 20px;}
+.head {
+    width: 100%;
+    height: 400px;
+    background: url(../img/me_bckg.jpg) no-repeat top;
+    background-size: cover;
+    overflow: hidden;
+}
 
 .footer .copyright {
     font-size: 12px;

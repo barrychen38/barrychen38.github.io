@@ -13,9 +13,7 @@ a {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-a:hover {
-    text-decoration: none;
-}
+a:hover {text-decoration: none;}
 input, button {
     outline: none;
     font-family: "microsoft yahei";
