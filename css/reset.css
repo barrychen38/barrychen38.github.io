@@ -35,6 +35,7 @@ ul, ol {
     line-height: 0;
     font-size: 0;
     visibility: hidden;
+    zoom: 1;
 }
 ::-moz-selection {
     background: #81CC7A;

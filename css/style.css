@@ -1,6 +1,6 @@
 body {
-    background: #efefef;
-    padding-top: 53px;
+    background: url(../img/grid.jpg) repeat;
+    padding-top: 56px;
 }
 .container {
     width: 980px;
@@ -8,19 +8,22 @@ body {
     margin: 0 auto;
 }
 .nav {
-    background: #777;
+    background: #393D48;
     position: fixed;
     width: 100%;
-    height: 33px;
+    height: 36px;
     top: 0;
+    *left: 0;
     z-index: 99;
 }
-.nav .container {background: none;}
+.nav ul li {
+    float: left;
+}
 .nav ul li a {
     display: block;
-    float: left;
-    padding: 6px 24px;
+    padding: 0 24px;
     color: #fff;
+    line-height: 36px;
 }
 .nav ul li a.pageon,
 .nav ul li a:hover {background: #81CC7A;}
@@ -41,13 +44,62 @@ body {
 }
 .text {color: #999;}
 /* about */
-.about {margin-bottom: 20px;}
+.information {
+    float: left;
+    width: 320px;
+    height: auto;
+}
 .head {
     width: 100%;
-    height: 400px;
+    height: 160px;
     background: url(../img/me_bckg.jpg) no-repeat top;
-    background-size: cover;
-    overflow: hidden;
+    background-size: 100%;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://chen38.github.io/img/me_bckg.jpg",sizingMethod="scale");
+}
+.chen38 {
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 99px;
+    margin: 0 auto;
+    position: relative;
+    top: 35px;
+}
+.social {
+    width: 100%;
+    height: 48px;
+    background: #393D48;
+}
+.social a {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 24px;
+    margin-top: 12px;
+}
+.social a.wechat {
+    border-right: 1px solid #ccc;
+    background: url(../img/wechat.png) no-repeat center center;
+}
+.social a.weibo {
+    background: url(../img/weibo.png) no-repeat center center;
+}
+.motto {
+    width: 100%;
+    height: auto;
+    line-height: 28px;
+    padding: 12px 24px;
+    text-align: center;
+    background: #4B565C;
+    color: #fff;
+    font-size: 14px;
+}
+.about {
+    width: 640px;
+    height: auto;
+    float: left;
+    margin-left: 20px;
+    padding: 16px;
+    border: 1px solid #ddd;
 }
 
 .footer .copyright {
