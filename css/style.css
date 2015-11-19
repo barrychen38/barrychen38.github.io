@@ -99,7 +99,7 @@ body {
     float: left;
     margin-left: 20px;
     padding: 16px;
-    border: 1px solid #ddd;
+    background: #fff;
 }
 
 .footer .copyright {
