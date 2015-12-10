@@ -26,6 +26,9 @@ This is my first time to create my own blog with github, not particularly stunni
 <script type="text/javascript">
 	window.onload = function() {
 		var a = document.getElementsByTagName('a');
-		a.setAttribute("target", "_blank");
+		var i = 0, len = a.length;
+		for (; i < len; i++) {
+			a[i].setAttribute("target", "_blank");
+		}
 	}
 </script>
