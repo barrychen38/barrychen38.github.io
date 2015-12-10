@@ -8,7 +8,6 @@
     <link rel="icon" href="img/github.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
     <div class="nav">
@@ -16,27 +15,39 @@
             <ul>
                 <li><a href="index.htm" class="pageon a1">首页</a></li>
                 <li><a href="share/share_index.htm" class="a2">分享</a></li>
-                <li><a href="me.htm" class="a3">我</a></li>
-                <div class="clear"></div>
+                <!-- <div class="clear"></div> -->
             </ul>     
         </div>
     </div>
     <div class="container">
         
+        <!-- <div class="bottom_img"></div> -->
     </div>
     
     <div class="footer">
-        <p class="copyright">
-            Copyright &copy; 2015 Created by Chen.
-        </p>
+        <p class="copyright">Copyright &copy; 2015 Created by Chen.</p>
     </div>
     
     <span href="javascript:;" class="gotop" title="I can fly.">
         <img src="img/up.png" height="36" width="36" alt="I can fly.">
     </span>
     
-    <!-- // <script type="text/javascript" src="js/index.js"></script> -->
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 60) {
+                $('.gotop').fadeIn(300);
+            } else {
+                $('.gotop').fadeOut(300);
+            }
+        });
+        $('.gotop').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 300);
+        });
+    </script>
 </body>
 
 </html>

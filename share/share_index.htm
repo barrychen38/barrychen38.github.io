@@ -8,7 +8,11 @@
     <link rel="icon" href="../img/github.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            showTime(getId("date"));
+        }
+    </script>
 </head>
 <body>
     <div class="nav">
@@ -16,7 +20,6 @@
             <ul>
                 <li><a href="../index.htm" class="a1">首页</a></li>
                 <li><a href="share_index.htm" class="pageon a2">分享</a></li>
-                <li><a href="../me.htm" class="a3">我</a></li>
                 <div class="clear"></div>
             </ul>     
         </div>
@@ -41,7 +44,22 @@
     </span>
     
     <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $('.gotop').hide();
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 60) {
+                $('.gotop').fadeIn(300);
+            } else {
+                $('.gotop').fadeOut(300);
+            }
+        });
+        $('.gotop').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 300);
+        });
+    </script>
 </body>
 
 </html>

@@ -6,9 +6,9 @@ This is my first time to create my own blog with github, not particularly stunni
 
 # My skills
 
-|    HTML    |    CSS    | JavaScript |
-|   :----:   |   :---:   |:----------:|
-|     90     |    80     |     50     |
+|    HTML    |    CSS    | JavaScript | jQuery |
+|   :----:   |   :---:   |:----------:| :----: |
+|     90     |    80     |     50     |   30   |
 
 ---
 
