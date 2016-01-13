@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<title>Hit The Ball</title>
+	<script type="text/javascript" src="js/babylon.js"></script>
+	<script type="text/javascript" src="js/hand.js"></script>
+	<script type="text/javascript" src="js/cannon.js"></script>
+	<style>
+		html, body {
+	        overflow: hidden;
+	        width   : 100%;
+	        height  : 100%;
+	        margin  : 0;
+	        padding : 0;
+	    }
+	    #renderCanvas {
+	        width   : 100%;
+	        height  : 100%;
+	        touch-action: none;
+	    }
+	</style>
+</head>
+<body>
+	<canvas id="renderCanvas"></canvas>
+	<script>
+		function $(id) {
+		    return document.getElementById(id);
+		}
+
+		var canvas = $("renderCanvas");
+
+		var engine = new BABYLON.Engine(canvas, true);
+
+		var createScene = function() {
+		    var scene = new BABYLON.Scene(engine);
+		    
+		    // var camera_1 = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(23, 5, -10), scene);
+		    // camera_1.setTarget(BABYLON.Vector3.Zero());
+		    // camera_1.attachControl(canvas, false);
+		    
+		    var camera_2 = new BABYLON.ArcRotateCamera("camera2", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+		    camera_2.attachControl(canvas, false);
+		    
+		    var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(8, 8, 8 ), scene);
+		    
+		    var ground = BABYLON.Mesh.CreateGround("ground", 12, 8, 8, scene);
+		    
+
+		    var ball = BABYLON.Mesh.CreateSphere("ball", 16, 1, scene);
+		    ball.position.x = 0;
+		    ball.position.y = 0.5;
+		    
+		    var ball_1 = BABYLON.Mesh.CreateSphere("ball_1", 16, 1, scene);
+		    ball_1.position.x = 10;
+		    
+		    // var plane = new BABYLON.StandardMaterial("plane", scene);
+		    
+		    var green_sur = new BABYLON.StandardMaterial("green_sur", scene);
+		    green_sur.diffuseColor = new BABYLON.Color3(0, 1 ,0);
+		    green_sur.diffuseTexture = new BABYLON.Texture("img/plane.jpg", scene);
+		    
+		    ground.material = green_sur;
+		    
+		    var white_sur = new BABYLON.StandardMaterial("white_sur", scene);
+		    white_sur.diffuseColor = new BABYLON.Color3(1, 1 ,1);
+		    ball.material = white_sur;
+		    
+		    var red_sur = new BABYLON.StandardMaterial("red_sur", scene);
+		    red_sur.diffuseColor = new BABYLON.Color3(1, 0 ,0);
+		    ball_1.material = red_sur;
+		    
+		    return scene;
+		}
+
+		var scene = createScene();
+
+		engine.runRenderLoop(function() {
+		    scene.render();
+		});
+
+		window.addEventListener("resize", function() {
+		    engine.resize();
+		    console.log("engine resize.");
+		});
+	</script>
+	
+</body>
+</html>

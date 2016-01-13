@@ -29,14 +29,15 @@ ul, ol {
     margin: 0;
     padding: 0;
 }
-.clear {
-    clear: both;
+.clear:after {
+    content: "";
+    display: block;
     height: 0;
-    line-height: 0;
-    font-size: 0;
+    width: 0;
     visibility: hidden;
-    zoom: 1;
+    clear: both;
 }
+.clear {zoom:1;}
 ::-moz-selection {
     background: #81CC7A;
     color: #fff;
