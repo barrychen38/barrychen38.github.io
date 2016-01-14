@@ -39,8 +39,11 @@
 		    // camera_1.setTarget(BABYLON.Vector3.Zero());
 		    // camera_1.attachControl(canvas, false);
 		    
-		    var camera_2 = new BABYLON.ArcRotateCamera("camera2", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
-		    camera_2.attachControl(canvas, false);
+		    // var camera_2 = new BABYLON.ArcRotateCamera("camera2", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+		    // camera_2.attachControl(canvas, false);
+		    
+		    var camera_3 = new BABYLON.TouchCamera("camera3", new BABYLON.Vector3(0, 5, -10), scene);
+    		camera_3.attachControl(canvas, false);
 		    
 		    var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(8, 8, 8 ), scene);
 		    
