@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo-Ps</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- filter -->
+	<script type="text/javascript" src="js/caman.full.min.js"></script>
+	<!-- control img -->
+	<script type="text/javascript" src="js/fabric.min.js"></script>
+</head>
+<body>
+	
+	<canvas id="myCanvas" width="800" height="400" data-caman-id="1"></canvas>
+	
+	
+	<script>
+		
+		Caman("#myCanvas", "../img/me_bckg.jpg", function () {
+		  this.brightness(10);
+		  this.contrast(20);
+		  this.render();
+		});
+		
+	</script>
+	
+</body>
+</html>
