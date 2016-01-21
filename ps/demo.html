@@ -11,7 +11,7 @@
 </head>
 <body>
 	
-	<canvas id="myCanvas" width="800" height="400" data-caman-id="1" data-caman-hidpi="../img/me_bckg.jpg"></canvas>
+	<canvas id="myCanvas" width="800" height="400" data-caman-id="1"></canvas>
 	
 	<div id="btns">
 		<span data-effect="Lomo" id="lomo">Lomo</span>
@@ -19,13 +19,14 @@
 	</div>
 	
 	<script>
-		
 		window.onload = function() {
 			Caman("#myCanvas");
-			
 			var name = "#myCanvas";
+			var path = "../img/me_bckg.jpg";
 			var btns = get("btns").getElementsByTagName('span'),
 				len = btns.length;
+				
+			Caman(name, path);
 			for (var i = 0; i < len; i++) {
 				btns[i].save = i;
 				btns[i].onclick = function() {
@@ -36,18 +37,18 @@
 					var eff = btns[this.save].dataset.effect;
 					switch (eff) {
 						case "Lomo":
-							Lomo(name);
+							Lomo(name, path);
 							break;
 						case "Warm":
-							Warm(name);
+							Warm(name, path);
 							break;
 						default:
 							break;
 					}
 				}
 			}
-			function Lomo(name) {
-				Caman(name, function() {
+			function Lomo(name, path) {
+				Caman(name, path, function() {
 					this.newLayer(function() {
 						this.fillColor("#603811");
 						this.opacity(60);
@@ -55,8 +56,8 @@
 					this.render();
 				});
 			}
-			function Warm(name) {
-				Caman(name, function() {
+			function Warm(name, path) {
+				Caman(name, path, function() {
 					this.brightness(30);
 					this.exposure(5);
 					this.sepia(45);
