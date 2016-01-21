@@ -20,6 +20,7 @@
 	
 	<script>
 		window.onload = function() {
+			
 			Caman("#myCanvas");
 			var name = "#myCanvas";
 			var path = "../img/me_bckg.jpg";
@@ -48,22 +49,13 @@
 				}
 			}
 			function Lomo(name, path) {
-				Caman(name, path);
 				Caman(name, path, function() {
-					this.newLayer(function() {
-						this.fillColor("#603811");
-						this.opacity(30);
-					});
-					this.render();
+					this.lomo().render();
 				});
 			}
 			function Warm(name, path) {
-				Caman(name, path);
 				Caman(name, path, function() {
-					this.brightness(30);
-					this.exposure(5);
-					this.sepia(45);
-					this.render();
+					this.love().render();
 				});
 			}
 			function get(id) {
