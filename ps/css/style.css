@@ -1,6 +1,12 @@
-body {
+html, body {
+  font-size: 16px;
+  font-family: "Microsoft Yahei";
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: #81cc7a;
 }
 
 #myCanvas {
@@ -23,7 +29,7 @@ body {
   float: left;
   cursor: pointer;
   font-size: 16px;
-  font-style: "Microsoft Yahei";
+  font-family: "Microsoft Yahei";
   margin-right: 8px;
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -40,6 +46,36 @@ body {
   font-size: 0;
   visibility: hidden;
   clear: both;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  /*line-height: 36px;*/
+  bottom: 0;
+}
+.footer span {
+  padding: 4px 8px;
+  color: #fff;
+}
+.footer .btn {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.footer .back {
+  left: 0;
+}
+.footer .next {
+  right: 0;
+}
+.footer .upload {
+  width: 100px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

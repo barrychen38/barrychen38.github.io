@@ -6,12 +6,17 @@ $coffee: #603811;
 }
 @mixin font {
 	font-size: 16px;
-	font-style: "Microsoft Yahei";
+	font-family: "Microsoft Yahei";
 }
 
-body {
+html, body {
+	@include font;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: #81cc7a;
 }
 #myCanvas {
 	display: block;
@@ -43,4 +48,31 @@ body {
 	font-size: 0;
 	visibility: hidden;
 	clear: both;
+}
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	/*line-height: 36px;*/
+	bottom: 0;
+	span {
+		padding: 4px 8px;
+		color: #fff;
+	}
+	.btn {
+		display: block;
+		position: absolute;
+		cursor: pointer;
+	}
+	.back {
+		left: 0;
+	}
+	.next {
+		right: 0;
+	}
+	.upload {
+		width: 100px;
+		height: auto;
+		@include center;
+	}
 }

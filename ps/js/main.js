@@ -1,9 +1,9 @@
 window.onload = function() {
 	var name = "#myCanvas";
-	var path = "../img/me_bckg.jpg";
+	var path = "../img/cover.jpg";
+	Caman(name, path);
 	var btns = get("btns").getElementsByTagName('span'),
 		len = btns.length;
-	Caman(name, path);
 	for (var i = 0; i < len; i++) {
 		btns[i].save = i;
 		btns[i].onclick = function() {
