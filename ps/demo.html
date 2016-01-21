@@ -21,6 +21,15 @@
 	<script>
 		window.onload = function() {
 			
+			var canvas = new fabric.Canvas("myCanvas");
+			var circle = new fabric.Circle({
+				radius: 10,
+				left: 100,
+				top: 100,
+				fill: "#ccc"
+			});
+			canvas.add(circle);
+			
 			Caman("#myCanvas");
 			var name = "#myCanvas";
 			var path = "../img/me_bckg.jpg";
