@@ -19,8 +19,10 @@
 		Caman("#myCanvas", "../img/me_bckg.jpg", function () {
 		  this.brightness(10);
 		  this.contrast(20);
-		  this.fillColor("#fc0");
-		  this.opacity(30);
+		  this.newLayer(function(){
+		  	this.fillColor("#fc0");
+		  	this.opacity(30);
+		  });
 		  this.render();
 		});
 		
