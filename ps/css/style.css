@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#myCanvas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#btns {
+  width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+#btns span {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: "Microsoft Yahei";
+  margin-right: 8px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+#btns span.selected {
+  background: #ddd;
+  color: #603811;
+}
+
+#btns:after {
+  content: "";
+  display: block;
+  height: 0;
+  font-size: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/*# sourceMappingURL=style.css.map */
