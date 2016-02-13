@@ -2,16 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mandy - Happy Birthday!</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mandy - Happy Birthday</title>
 </head>
 <style>
-	
-	
-	
+	* {padding: 0;margin: 0;font-family: "Microsoft Yahei";cursor: default;}
+	body {padding: 24px;}
+	p {text-align: center;}
+	#title {font-size: 64px;letter-spacing: 2px;}
+	#pic {width: 400px;height: 640px;margin: 0 auto;margin-top: 24px;}
+	.footer {margin-top: 24px;}
+	.footer p {color: #999;font-size: 16px;}
 </style>
 <body>
 	
+	<p id="title">朱梦婷生日快乐！</p>
+	<div id="pic" title="朱梦婷生日快乐！">
+		<img src="img/0209.jpg" height="640" width="401" alt="ZMT">
+	</div>
 	
+	<div class="footer">
+		<p>&copy; 2016 Created By Chen38 for Mandy.</p>
+	</div>
 	
+	<script>
+		var timer = setInterval(function(){
+			var r1 = parseInt(Math.random()*255),
+				r2 = parseInt(Math.random()*255),
+				r3 = parseInt(Math.random()*255);
+			get("title").style.color = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
+		}, 80);
+		function get(id) {
+			return document.getElementById(id);
+		}
+	</script>
 </body>
 </html>
