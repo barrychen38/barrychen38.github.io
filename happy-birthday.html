@@ -10,23 +10,69 @@
 	* {padding: 0;margin: 0;font-family: "Microsoft Yahei";cursor: default;}
 	body {padding: 24px;-webkit-user-select:none;}
 	p {text-align: center;}
-	#title {font-size: 64px;letter-spacing: 2px;}
-	#pic {width: 400px;height: 640px;margin: 0 auto;margin-top: 24px;}
+	#container{width: 767px;height: auto;margin: 0 auto;display: none;}
+	#title {font-size: 58px;letter-spacing: 2px;}
+	#pic {width: 300px;height: 480px;margin: 0 auto;margin-top: -24px;position: relative;}
+	.arr {position: absolute;top: 200px;left: -39px;}
+	.arr_text {position: absolute;top: 180px;left: -80px;-webkit-transform: rotate(-36deg);-moz-transform: rotate(-36deg);transform: rotate(-36deg);color: red;}
+	@-webkit-keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @-moz-keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } }
+	@-webkit-keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @-moz-keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } }
+	.animate {animation-name: scale;animation-duration: 8s;}
+	.animate1 {animation-name: scale1;animation-duration: 0.8s;}
+	#count {position: absolute;width: 160px;height: 160px;top: 50%;left: 50%;margin: -80px 0 0 -80px;font-size: 120px;font-weight: bold;text-align: center;}
+	#king {position: absolute;width: 135px;height: 110px;top: 50%;left: 50%;margin: -67.5px 0 0 -55px;display: none;}
 </style>
 <body>
 	
-	<p id="title">朱梦婷生日快乐！</p>
-	<div id="pic" title="朱梦婷生日快乐！">
-		<img src="img/0209.jpg" height="640" width="401" alt="ZMT">
+	<div id="container">
+		<p id="title">朱梦婷生日快乐<br><span style="font-size:16px;position:relative;top:-36px;">有股杀马特的味道</span></p>
+		<div id="pic" title="朱梦婷生日快乐">
+			<img src="img/0209.jpg" height="480" width="300" alt="ZMT">
+			<div class="arr">
+				<img src="img/arr.png" height="29" width="27" alt="arr">
+			</div>
+			<p class="arr_text">微信盗图</p>
+		</div>
+	</div>
+	
+	<div id="count"></div>
+	
+	<div id="king">
+		<img src="img/king.jpg" height="110" width="135" alt="king">
 	</div>
 	
 	<script>
-		// var timer = setInterval(function(){
-		// 	var r1 = parseInt(Math.random()*255),
-		// 		r2 = parseInt(Math.random()*255),
-		// 		r3 = parseInt(Math.random()*255);
-		// 	get("title").style.color = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
-		// }, 80);
+		window.onload = function() {
+			var i = 3;
+			function counter() {
+				get("count").innerHTML = i;
+				get("count").className = "animate";
+				i--;
+				var timer = setTimeout(counter, 1500);
+				if (i == -1) {
+					get("count").style.display = "none";
+					setTimeout(function(){
+						get("king").style.display = "block";
+						get("king").className = "animate1";
+					}, 1000);
+					setTimeout(function(){
+						get("king").style.display = "none";
+						get("container").style.display = "block";
+						shan();
+					}, 3000);
+					clearTimeout(timer);
+				}
+			}
+			counter();
+		}
+		function shan() {
+			var timer = setInterval(function(){
+				var r1 = parseInt(Math.random()*255),
+					r2 = parseInt(Math.random()*255),
+					r3 = parseInt(Math.random()*255);
+				get("title").style.color = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
+			}, 80);
+		}
 		function get(id) {
 			return document.getElementById(id);
 		}
