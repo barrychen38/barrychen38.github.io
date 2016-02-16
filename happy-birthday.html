@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="img/heart.png">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" href="img/heart.png" />
 	<title>Mandy - Happy Birthday</title>
 </head>
 <style>
 	* {padding: 0;margin: 0;font-family: "Microsoft Yahei";cursor: default;}
 	body {padding: 24px;-webkit-user-select:none;}
 	p {text-align: center;}
-	#container{width: 767px;height: auto;margin: 0 auto;display: none;}
-	#title {font-size: 58px;letter-spacing: 2px;}
-	#pic {width: 300px;height: 480px;margin: 0 auto;margin-top: -24px;position: relative;}
+	#container{width: 767px;height: auto;margin: 0 auto;display: none;position: relative;top: 120px;}
+	#title {font-size: 37px;letter-spacing: 2px;position: absolute;z-index:99;top: 24px;left: 209px;}
+	#pic {width: 473px;height: 490px;margin: 0 auto;margin-top: -24px;position: relative;}
+	.deng, .a {position: absolute;display: block;}
+	.deng1 {top: 137px;left: 132px;-webkit-transform-origin: 50% 0;transform-origin: 50% 0;-webkit-transform: rotate(16deg);transform: rotate(16deg);-webkit-animation-name: shake;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-direction:alternate;animation-direction:alternate;animation-name: shake;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+	.deng2 {top: 177px;right: 72px;-webkit-transform-origin: 50% 0;transform-origin: 50% 0;-webkit-transform: rotate(16deg);transform: rotate(16deg);-webkit-animation-name: shake;animation-name: shake;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-direction:alternate;animation-direction:alternate;-webkit-animation-timing-function: ease-in-out;animation-timing-function: ease-in-out;-webkit-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+	.pao {top: 11px;right: 0;}
+	.zhu {bottom: 14px;left: 16px;}
 	.arr {position: absolute;top: 200px;left: -39px;}
 	.arr_text {position: absolute;top: 180px;left: -80px;-webkit-transform: rotate(-36deg);-moz-transform: rotate(-36deg);transform: rotate(-36deg);color: red;}
-	@-webkit-keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @-moz-keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @keyframes scale {from {-webkit-transform: scale(3); -moz-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } }
-	@-webkit-keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @-moz-keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } } @keyframes scale1 {from {-webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); opacity: 1; } }
-	.animate {animation-name: scale;animation-duration: 8s;}
-	.animate1 {animation-name: scale1;animation-duration: 0.8s;}
+	@-webkit-keyframes scale {from {-webkit-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); transform: scale(1); opacity: 1; } } 
+	@keyframes scale {from {-webkit-transform: scale(3); transform: scale(3); opacity: 0; } to {-webkit-transform: scale(1); transform: scale(1); opacity: 1; } }
+	@-webkit-keyframes scale1 {from {-webkit-transform: scale(0); ransform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); transform: scale(1); opacity: 1; } } 
+	@keyframes scale1 {from {-webkit-transform: scale(0); transform: scale(0); opacity: 0; } to {-webkit-transform: scale(1); transform: scale(1); opacity: 1; } }
+	.animate {-webkit-animation-name: scale;animation-name: scale;-webkit-animation-duration: 8s;animation-duration: 8s;}
+	.animate1 {-webkit-animation-name: scale1;animation-name: scale1;-webkit-animation-duration: 0.8s;animation-duration: 0.8s;}
 	#count {position: absolute;width: 160px;height: 160px;top: 50%;left: 50%;margin: -80px 0 0 -80px;font-size: 120px;font-weight: bold;text-align: center;}
-	#king {position: absolute;width: 135px;height: 110px;top: 50%;left: 50%;margin: -67.5px 0 0 -55px;display: none;}
+	#king {position: absolute;width: 440px;height: 60px;text-align: center;top: 50%;left: 50%;margin: -30px 0 0 -220px;display: none;font-size: 48px;font-weight: bold;color: red;}
+	@-webkit-keyframes shake {0 {-webkit-transform: rotate(16deg); transform: rotate(16deg); } 100% {-webkit-transform: rotate(-16deg); transform: rotate(-16deg); } } 
+	@keyframes shake {0 {-webkit-transform: rotate(16deg); transform: rotate(16deg); } 100% {-webkit-transform: rotate(-16deg); transform: rotate(-16deg); } } 
+	.animate2 {animation-name: shake;animation-duration: 0.8s;}
 </style>
 <body>
-	
 	<audio id="play" autoplay="autoplay" preload="load" loop="loop">
 		<source src="img/spring.mp3" type="audio/mpeg" />
 	</audio>
-	
 	<div id="container">
-		<p id="title">Wuli 梦婷生日快乐<br><span style="font-size:24px;position:relative;top:-36px;">来自巴里和玉萍深深的祝福</span></p>
+		<p id="title">Wuli 梦婷生日快乐</p>
 		<div id="pic" title="朱梦婷生日快乐">
-			<img src="img/0209.jpg" height="480" width="300" alt="ZMT">
+			<img src="img/MANDY.jpg" height="490" width="473" alt="ZMT">
+			<img src="img/deng1.png" height="176" width="36" alt="deng" class="deng deng1">
+			<img src="img/deng2.png" height="141" width="81" alt="deng" class="deng deng2">
+			<img src="img/pao.png" height="169" width="98" alt="pao" class="pao a">
+			<img src="img/zhu.png" height="108" width="145" alt="zhu" class="zhu a">
 			<div class="arr">
 				<img src="img/arr.png" height="29" width="27" alt="arr">
 			</div>
 			<p class="arr_text">微信盗图</p>
 		</div>
 	</div>
-	
 	<div id="count"></div>
-	
-	<div id="king">
-		<img src="img/king.jpg" height="110" width="135" alt="king">
-	</div>
-	
+	<div id="king"> 亲，你中奖啦！！！ </div>
 	<script>
 		get("play").play();
 		window.onload = function() {
