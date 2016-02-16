@@ -24,8 +24,12 @@
 </style>
 <body>
 	
+	<audio id="play" autoplay="autoplay" preload="load" loop="loop">
+		<source src="img/spring.mp3" type="audio/mpeg" />
+	</audio>
+	
 	<div id="container">
-		<p id="title">朱梦婷生日快乐<br><span style="font-size:16px;position:relative;top:-36px;">有股杀马特的味道</span></p>
+		<p id="title">Wuli 梦婷生日快乐<br><span style="font-size:24px;position:relative;top:-36px;">来自巴里和玉萍深深的祝福</span></p>
 		<div id="pic" title="朱梦婷生日快乐">
 			<img src="img/0209.jpg" height="480" width="300" alt="ZMT">
 			<div class="arr">
@@ -43,6 +47,7 @@
 	
 	<script>
 		window.onload = function() {
+			get("play").play();
 			var i = 3;
 			function counter() {
 				get("count").innerHTML = i;
