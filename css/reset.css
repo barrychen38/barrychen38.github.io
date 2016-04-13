@@ -1,22 +1,18 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "microsoft yahei";
+    font-family: "Microsoft Yahei";
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 a {
     text-decoration: none;
-    color: #777;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    color: #83CB7D;
 }
-a:hover {text-decoration: none;}
 input, button {
     outline: none;
-    font-family: "microsoft yahei";
+    font-family: "Microsoft Yahei";
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;

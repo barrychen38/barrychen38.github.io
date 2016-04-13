@@ -1,27 +1,32 @@
 console.log('I am Adobe.');
-var getId = function(id) {
-    return document.getElementById(id);
-};
-function checkTime(time) {
-    if (time < 10) {
-        time = "0" + time;
-    }
-    return time;
+
+// preload images
+var images = [];
+function preloadImg() {
+	for (var i = 0; i < arguments.length; i++) {
+		images[i] = new Image();
+		images[i].src = arguments[i];
+	} 
 }
-function weekDay(day) {
-    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    return days[day];
-}
-function monthDay(month) {
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return months[month];
-}
-function showTime(con) {
-    var time = new Date(),
-        year = time.getFullYear(),
-        month = monthDay(time.getMonth()),
-        date = checkTime(time.getDate()),
-        day = weekDay(time.getDay());
-    con.innerHTML = day + ", " + month + " " + date + ", " + year;
-}
-    
+preloadImg("img/weibo_red.png", "img/wechat_green.png");
+
+// show wechat QRCode
+var timer, timer_show;
+$("#wechat").hover(function() {
+	clearTimeout(timer);
+	timer = setTimeout(function() {
+		$(".qrcode").fadeIn(300);
+	}, 200);}, function() {
+	clearTimeout(timer);
+	timer_show = setTimeout(function() {
+		$(".qrcode").fadeOut(300);
+	}, 300);
+});
+$(".qrcode").hover(function() {
+	clearTimeout(timer_show);
+	$(".qrcode").show();
+}, function() {
+	setTimeout(function() {
+		$(".qrcode").fadeOut(300);
+	}, 300);
+});
