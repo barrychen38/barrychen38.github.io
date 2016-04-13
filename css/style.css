@@ -1,75 +1,25 @@
-@font-face {
-    font-family: Source Code Pro;
-    source: url(../fonts/SourceCodePro-Regular.ttf);
-}
-body {
-    background: url(../img/grid.jpg) repeat;
-    padding-top: 56px;
+body, html {
+    background: #393D48;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 .container {
     width: 980px;
     height: auto;
     margin: 0 auto;
 }
-.nav {
-    background: #393D48;
-    position: fixed;
+
+.footer {
+    position: absolute;
     width: 100%;
-    height: 36px;
-    top: 0;
-    *left: 0;
-    z-index: 99;
+    height: auto;
+    bottom: 0;
 }
-.nav ul li {
-    float: left;
-}
-.nav ul li a {
-    display: block;
-    padding: 0 24px;
-    color: #fff;
-    line-height: 36px;
-}
-.nav ul li a.pageon,
-.nav ul li a:hover {background: #81CC7A;}
-.bottom_img {
-    width: 300px;
-    height: 208px;
-    background: url(../img/sheep.jpg) no-repeat center center #fff;
-    margin: 8px auto;
-    padding: 8px;
-    -webkit-box-shadow: 0 0 12px #ccc;
-    -moz-box-shadow: 0 0 12px #ccc;
-    box-shadow: 0 0 12px #ccc;
-}
-/* share */
-.article {
-    background: #fff;
-    padding: 16px;
-    margin-bottom: 20px;
-}
-#date {margin-bottom: 12px;}
-.info {margin-top: 12px;}
-#date, .info {font-size: 13px;}
-.title {font-size: 20px;}
-.detail {
-    font-size: 14px;
-    margin-top: 12px;
-    color: #999;
-}
-.text {color: #999;}
 .footer .copyright {
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
-    padding: 16px 0 8px;
+    padding: 16px 0;
     cursor: default;
-    color: #777;
-}
-.gotop {
-    display: none;
-    width: 36px;
-    height: 36px;
-    position: fixed;
-    bottom: 36px;
-    right: 36px;
-    cursor: pointer;
+    color: #fff;
 }
