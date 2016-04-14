@@ -406,7 +406,7 @@ pre {
 .exclamationMark {
   padding-left: 1em;
   padding-right: 1em;
-  color: $white-color;
+  color: #828282;
 }
 .site-navigation {
   color: #aaa;
@@ -494,7 +494,7 @@ pre {
   padding: $spacing-unit 0;
   .wrapper {
     padding-top: $spacing-unit;
-    border-top: 1px dotted #fff;
+    border-top: 1px dotted #828282;
   }
 }
 .footer-heading {
@@ -530,7 +530,7 @@ pre {
       margin-top: -8px;
       left: -16px;
       border: 8px solid transparent;
-      border-right-color: #000;
+      border-right-color: #fff;
     }
   }
 }
