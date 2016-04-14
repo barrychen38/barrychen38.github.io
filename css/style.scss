@@ -299,7 +299,7 @@ pre {
         vertical-align: middle;
         position: relative;
         top: -2px;
-
+        right: 6px;
         path {
             fill: $grey-color;
         }
@@ -519,6 +519,7 @@ pre {
     position: absolute;
     top: 8px;
     left: 8px;
+    display: none;
     &:after {
       content: '';
       display: block;
