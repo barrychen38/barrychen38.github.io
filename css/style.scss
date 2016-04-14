@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+$base-font-family: "PT Sans", "Microsoft Yahei", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -20,7 +20,8 @@ $text-color:       #fff;
 $background-color: #393D48;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
+// $grey-color:       #828282;
+$white-color:       #FFFFFF;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 $green-color-light: #83CB7D;
@@ -475,7 +476,7 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  // border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
 .footer-heading {
@@ -492,7 +493,7 @@ pre {
 }
 .footer-col-wrapper {
   font-size: 15px;
-  color: $grey-color;
+  color: $white-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
