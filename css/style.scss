@@ -517,8 +517,8 @@ pre {
     width: 120px;
     height: 120px;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: -7px;
+    right: -60px;
     display: none;
     &:after {
       content: '';
@@ -526,11 +526,11 @@ pre {
       width: 0;
       height: 0;
       position: absolute;
-      left: 50%;
-      margin-left: -8px;
-      bottom: -16px;
+      top: 50%;
+      margin-top: -8px;
+      left: -16px;
       border: 8px solid transparent;
-      border-top-color: #fff;
+      border-right-color: #fff;
     }
   }
 }

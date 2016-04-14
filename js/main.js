@@ -18,7 +18,7 @@ if (!userAgent.test(navigator.userAgent)) {
 
 // show wechat QRCode
 var timer, timer_show;
-$(".icon--wechat").hover(function() {
+$(".wechat").hover(function() {
 	clearTimeout(timer);
 	timer = setTimeout(function() {
 		$(".qrcode").fadeIn(300);
