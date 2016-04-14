@@ -419,7 +419,7 @@ pre {
   text-indent: 6px;
   font-family: 'Josefin Sans';
   font-weight: 300;
-  padding-top: 3em;
+  padding-top: 2em;
 }
 .page-title {
   text-transform: uppercase;
@@ -520,6 +520,10 @@ pre {
     top: -7px;
     right: -60px;
     display: none;
+    img {
+      border-radius: 3px;
+      box-shadow: 0px 0px 10px 0px #fff;
+    }
     &:after {
       content: '';
       display: block;
