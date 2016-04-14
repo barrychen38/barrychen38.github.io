@@ -84,7 +84,14 @@ body {
     font-kerning: normal;
 }
 
-
+::-moz-selection {
+    background: #81CC7A;
+    color: #fff;
+}
+::selection {
+    background: #81CC7A;
+    color: #fff;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -150,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: #fff !important;
+    color: $text-color !important;
     text-decoration: none;
 
     &:visited {
@@ -159,20 +166,21 @@ a {
 
     &:hover {
         color: #999 !important;
-        border-bottom: 1px dotted black ;
+        border-bottom: 1px dotted #83CB7D ;
     }
 
     &.page-link{
+      font-family: "Microsoft Yahei";
       &:hover {
-          color: $text-color;
-          border-bottom: 1px dotted black ;
+          color: #999;
+          border-bottom: 1px dotted #999 ;
       }
     }
     &.postLink{
-      color: black !important;
+      color: $text-color !important;
       &:hover {
-
-          border-bottom: 1px dotted black ;
+          color: #999 !important;
+          border-bottom: 1px dotted #999 ;
       }
 
       &:visited {
@@ -180,10 +188,10 @@ a {
       }
     }
     &.post-title-link{
-      color: black !important;
+      color: $text-color !important;
       &:hover {
-
-          border-bottom: 1px dotted black !important ;
+          color: #999 !important;
+          border-bottom: 1px dotted #999 !important ;
       }
 
       &:visited {
@@ -286,6 +294,8 @@ pre {
         width: 16px;
         height: 16px;
         vertical-align: middle;
+        position: relative;
+        top: -2px;
 
         path {
             fill: $grey-color;
@@ -391,13 +401,14 @@ pre {
   font-family: 'Josefin Sans';
 }
 .exclamationMark {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: $white-color;
 }
 .site-navigation {
   color: #aaa;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-indent: 6px;
   font-family: 'Josefin Sans';
@@ -478,6 +489,10 @@ pre {
 .site-footer {
   // border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  .wrapper {
+    padding-top: $spacing-unit;
+    border-top: 1px dotted #fff;
+  }
 }
 .footer-heading {
   font-size: 18px;
