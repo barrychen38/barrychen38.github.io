@@ -16,23 +16,25 @@ if (!userAgent.test(navigator.userAgent)) {
 // }
 // preloadImg("img/weibo_red.png", "img/wechat_green.png");
 
-// show wechat QRCode
-var timer, timer_show;
-$(".wechat").hover(function() {
-	clearTimeout(timer);
-	timer = setTimeout(function() {
-		$(".qrcode").fadeIn(300);
-	}, 200);}, function() {
-	clearTimeout(timer);
-	timer_show = setTimeout(function() {
-		$(".qrcode").fadeOut(300);
-	}, 300);
-});
-$(".qrcode").hover(function() {
-	clearTimeout(timer_show);
-	$(".qrcode").show();
-}, function() {
-	setTimeout(function() {
-		$(".qrcode").fadeOut(300);
-	}, 300);
+$(function() {
+	// show wechat QRCode
+	var timer, timer_show;
+	$(".wechat").hover(function() {
+		clearTimeout(timer);
+		timer = setTimeout(function() {
+			$(".qrcode").fadeIn(300);
+		}, 200);}, function() {
+		clearTimeout(timer);
+		timer_show = setTimeout(function() {
+			$(".qrcode").fadeOut(300);
+		}, 300);
+	});
+	$(".qrcode").hover(function() {
+		clearTimeout(timer_show);
+		$(".qrcode").show();
+	}, function() {
+		setTimeout(function() {
+			$(".qrcode").fadeOut(300);
+		}, 300);
+	});
 });
