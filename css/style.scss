@@ -159,28 +159,30 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $text-color !important;
     text-decoration: none;
-
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    
     &:visited {
         color: darken($brand-color, 15%);
     }
 
     &:hover {
-        color: #999 !important;
+        color: #83CB7D !important;
         border-bottom: 1px dotted #83CB7D ;
     }
 
     &.page-link{
       font-family: "Microsoft Yahei";
       &:hover {
-          color: #999;
-          border-bottom: 1px dotted #999 ;
+          color: #83CB7D !important;
+          border-bottom: 1px dotted #83CB7D ;
       }
     }
     &.postLink{
       color: $text-color !important;
       &:hover {
-          color: #999 !important;
-          border-bottom: 1px dotted #999 ;
+          color: #83CB7D !important;
+          border-bottom: 1px dotted #83CB7D ;
       }
 
       &:visited {
@@ -190,8 +192,8 @@ a {
     &.post-title-link{
       color: $text-color !important;
       &:hover {
-          color: #999 !important;
-          border-bottom: 1px dotted #999 !important ;
+          color: #83CB7D !important;
+          border-bottom: 1px dotted #83CB7D !important ;
       }
 
       &:visited {
@@ -351,7 +353,7 @@ pre {
 }
 .postContent {
   padding-top: 3.5em;
-  text-align: center;
+  // text-align: center;
 }
 .postDate {
   float: left;
