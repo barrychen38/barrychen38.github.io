@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: "PT Sans", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+$base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -73,7 +73,8 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -193,7 +194,7 @@ a {
       color: $text-color !important;
       &:hover {
           color: #83CB7D !important;
-          border-bottom: 1px dotted #83CB7D !important ;
+          border-bottom: 1px dotted #83CB7D ;
       }
 
       &:visited {
@@ -390,11 +391,11 @@ pre {
   font-family: 'PT Sans';
   text-transform: capitalize;
   font-weight: 500;
-  margin-top: 1em;
+  margin-top: 0.5em;
    a {
     color: #83CB7D !important;
     &:hover {
-      text-decoration: none;
+      border-bottom: none;
     }
    }
 }
@@ -417,7 +418,7 @@ pre {
   text-indent: 6px;
   font-family: 'Josefin Sans';
   font-weight: 300;
-  padding-top: 5em;
+  padding-top: 3em;
 }
 .page-title {
   text-transform: uppercase;
@@ -507,8 +508,8 @@ pre {
   list-style: none;
   margin-left: 0;
   a:hover {
-    text-decoration: none;
-    color: $white-color;
+    border-bottom: none;
+    color: $white-color !important;
   }
 }
 .small-site-title {

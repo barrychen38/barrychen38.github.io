@@ -1,11 +1,10 @@
 console.log('I am Adobe.');
 
-// judge system
+// judge system to use diff font
 var userAgent = /[Mac OS X]/g;
 if (!userAgent.test(navigator.userAgent)) {
-	
+	$("body").css("font-family", "Microsoft Yahei");
 }
-
 
 // preload images
 // var images = [];
