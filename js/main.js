@@ -1,5 +1,12 @@
 console.log('I am Adobe.');
 
+// judge system
+var userAgent = /[Mac OS X]/g;
+if (!userAgent.test(navigator.userAgent)) {
+	
+}
+
+
 // preload images
 // var images = [];
 // function preloadImg() {
