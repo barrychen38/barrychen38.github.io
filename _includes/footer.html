@@ -1,0 +1,44 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By Gravity</li>
+          <li>Made with <i class="fa fa-heart" style="color:#ef6f67;"></i> on <a href="http://jekyllrb.com/"><span style="color:#83CB7D;font-weight:600;">{ { Jekyll } }</a></span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.weibo_username %}
+          <li>
+            {% include icon-weibo.html username=site.weibo_username %}
+          </li>
+          {% endif %}
+          
+          {% if site.wechat_username %}
+          <li>
+            {% include icon-wechat.html username=site.wechat_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

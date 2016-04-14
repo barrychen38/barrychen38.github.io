@@ -1,36 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>陈宇斌 (Barry Chen)</title>
-    <link rel="icon" href="img/github.png">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="container_inner">
-            <div class="inner">
-            	<img src="img/12.jpg" width="200" height="200" alt="head">
-                <p>QQ: 1208970625<br>Tel: 15757125386<br>Email: spchen38@163.com</p>
-                <p style="font-size:32px;color:#83CB7D;">Coming soon...</p>
-            </div>
-        </div>                
-    </div>
-    <div class="footer">
-        <div class="social">
-            <a href="http://weibo.com/231230138" target="_blank" class="social_icon" id="weibo"></a>
-            <span class="social_icon" id="wechat"></span>
-            <div class="qrcode">
-                <img src="img/QRcode.png" width="120" height="120" alt="QRcode">
-            </div>
-        </div>
-        <p class="copyright">Copyright &copy; 2015-2016 Created by Chen</p>
-    </div>
-    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
+---
+layout: default
+---
 
-</html>
+<div class="home">
+
+
+  {% for post in site.posts%}
+  <div class="post postContent">
+    <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </div>
+    <div class="postDay">
+      {{post.tag}}
+    </div>
+    <br>
+    <div class="postTitle">
+    <a class='postLink' href="{{post.url}}">{{post.title}}</a>
+    </div>
+    <div class="postExt">
+   {{ post.content | strip_html | truncatewords:20}}
+    </div>
+  </div>
+
+
+  {% endfor %}
+  <!--<ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>-->
+
+</div>
