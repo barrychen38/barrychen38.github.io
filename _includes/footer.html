@@ -19,6 +19,21 @@
             {% include icon-github.html username=site.github_username %}
           </li>
           {% endif %}
+          
+          {% if site.weibo_username %}
+          <li>
+            {% include icon-weibo.html username=site.weibo_username %}
+          </li>
+          {% endif %}
+          
+          {% if site.wechat_username %}
+          <li>
+            {% include icon-wechat.html username=site.wechat_username %}
+          </li>
+          {% endif %}
+          
+          <div class="qrcode"><img src="../img/QRcode.png" width="120" height="120" alt="QRcode"></div>
+          
         </ul>
       </div>
 

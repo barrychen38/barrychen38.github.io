@@ -173,7 +173,7 @@ a {
     }
 
     &.page-link{
-      font-family: "Microsoft Yahei";
+      font-family: $base-font-family;
       &:hover {
           color: #83CB7D !important;
           border-bottom: 1px dotted #83CB7D ;
@@ -353,7 +353,7 @@ pre {
   text-indent: 2px;
 }
 .postContent {
-  padding-top: 3.5em;
+  padding-top: 2em;
   // text-align: center;
 }
 .postDate {
@@ -370,10 +370,11 @@ pre {
 }
 .postTitle {
   font-weight: 400;
-  text-align: center;
+  // text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-indent: 3px;
+  padding: 0.5em 0;
 }
 /**
  * Site header
@@ -507,9 +508,29 @@ pre {
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  position: relative;
   a:hover {
     border-bottom: none;
     color: $white-color !important;
+  }
+  .qrcode {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      margin-left: -8px;
+      bottom: -16px;
+      border: 8px solid transparent;
+      border-top-color: #fff;
+    }
   }
 }
 .small-site-title {

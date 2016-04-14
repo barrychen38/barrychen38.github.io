@@ -3,7 +3,7 @@ console.log('I am Adobe.');
 // judge system to use diff font
 var userAgent = /[Mac OS X]/g;
 if (!userAgent.test(navigator.userAgent)) {
-	$("body").css("font-family", "Microsoft Yahei");
+	$("body, .page-link").css("font-family", "Microsoft Yahei");
 }
 
 // preload images
@@ -17,22 +17,22 @@ if (!userAgent.test(navigator.userAgent)) {
 // preloadImg("img/weibo_red.png", "img/wechat_green.png");
 
 // show wechat QRCode
-// var timer, timer_show;
-// $("#wechat").hover(function() {
-// 	clearTimeout(timer);
-// 	timer = setTimeout(function() {
-// 		$(".qrcode").fadeIn(300);
-// 	}, 200);}, function() {
-// 	clearTimeout(timer);
-// 	timer_show = setTimeout(function() {
-// 		$(".qrcode").fadeOut(300);
-// 	}, 300);
-// });
-// $(".qrcode").hover(function() {
-// 	clearTimeout(timer_show);
-// 	$(".qrcode").show();
-// }, function() {
-// 	setTimeout(function() {
-// 		$(".qrcode").fadeOut(300);
-// 	}, 300);
-// });
+var timer, timer_show;
+$(".icon--wechat").hover(function() {
+	clearTimeout(timer);
+	timer = setTimeout(function() {
+		$(".qrcode").fadeIn(300);
+	}, 200);}, function() {
+	clearTimeout(timer);
+	timer_show = setTimeout(function() {
+		$(".qrcode").fadeOut(300);
+	}, 300);
+});
+$(".qrcode").hover(function() {
+	clearTimeout(timer_show);
+	$(".qrcode").show();
+}, function() {
+	setTimeout(function() {
+		$(".qrcode").fadeOut(300);
+	}, 300);
+});
