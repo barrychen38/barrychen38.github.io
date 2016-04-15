@@ -8,7 +8,7 @@ function preloadImg() {
 		images[i].src = arguments[i];
 	} 
 }
-preloadImg("img/QRcode.png");
+preloadImg("/img/QRcode.png");
 
 // go top
 $(window).scroll(function(event) {

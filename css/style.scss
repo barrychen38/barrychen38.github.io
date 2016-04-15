@@ -670,6 +670,10 @@ pre {
 /**
  * Syntax highlighting styles
  */
+.highlighter-rouge {
+ background-color: rgba(0,0,0,0.04);
+ font-family: $code-font-family;
+}
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;
