@@ -10,6 +10,17 @@ function preloadImg() {
 }
 preloadImg("img/QRcode.png");
 
+// go top
+if ($(window).scrollTop() >= 60) {
+	$(".gotop").fadeIn(300);
+} else {
+	$(".gotop").fadeOut(300);
+}
+$(".gotop").click(function(event) {
+	event.preventDefault();
+	$("html, body").animate({'scrollTop': 0}, 300);
+});
+
 $(function() {
 	// show wechat QRCode
 	var timer, timer_show;

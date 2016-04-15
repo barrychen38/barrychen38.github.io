@@ -162,6 +162,11 @@ a {
     text-decoration: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    outline: none;
+    
+    &:focus {
+      outline: none;
+    }
     
     &:visited {
         color: darken($brand-color, 15%);
@@ -495,6 +500,16 @@ pre {
   .wrapper {
     padding-top: $spacing-unit;
     border-top: 1px dotted #828282;
+    position: relative;
+    .gotop {
+      width: 32px;
+      height: 32px;
+      position: fixed;
+      bottom: 80px;
+      right: 180px;
+      cursor: pointer;
+      display: none;
+    }
   }
 }
 .footer-heading {
