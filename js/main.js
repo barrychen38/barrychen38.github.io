@@ -1,20 +1,14 @@
 console.log('I am Adobe.');
 
-// judge system to use diff font
-var userAgent = /[Mac OS X]/g;
-if (!userAgent.test(navigator.userAgent)) {
-	$("body, .page-link").css("font-family", "Microsoft Yahei");
-}
-
 // preload images
-// var images = [];
-// function preloadImg() {
-// 	for (var i = 0; i < arguments.length; i++) {
-// 		images[i] = new Image();
-// 		images[i].src = arguments[i];
-// 	} 
-// }
-// preloadImg("img/weibo_red.png", "img/wechat_green.png");
+var images = [];
+function preloadImg() {
+	for (var i = 0; i < arguments.length; i++) {
+		images[i] = new Image();
+		images[i].src = arguments[i];
+	} 
+}
+preloadImg("img/QRcode.png");
 
 $(function() {
 	// show wechat QRCode
