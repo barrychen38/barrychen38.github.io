@@ -27,7 +27,7 @@ function Student(name,age,sex) {
   this.sex = sex;
 }
 var student = new Student("chen38",22,"man");
-console.log("name:"+student.name+" age:"+student.age+" sex:"+student.sex);
+console.log("name:" + student.name + " age:" + student.age + " sex:" + student.sex);
 //==> name:chen38 age:22 sex:man
 {% endhighlight %}
 	
@@ -41,7 +41,7 @@ console.log("name:"+student.name+" age:"+student.age+" sex:"+student.sex);
     
 {% highlight js %}
 function print(word) {
-	console.log(this + word);
+  console.log(this + word);
 }
 print.call("Hello ", "World!"); //==> Hello World!
 {% endhighlight %}
@@ -52,11 +52,11 @@ Anonymous function is the same as the substitution method:
     
 {% highlight js %}
 (function(name){
-	console.log(name);
+  console.log(name);
 })("Hello");
 // equivalent to
 (function(name){
-	console.log(name);
+  console.log(name);
 }).call(window, "Hello");
 {% endhighlight %}
     
@@ -64,10 +64,10 @@ The function is called as the object's property is different:
    
 {% highlight js %}
 var person = {
-	name: "chen38",
-	sex: function(sex) {
-		console.log(this.name + " is " + sex);
-	}
+  name: "chen38",
+  sex: function(sex) {
+    console.log(this.name + " is " + sex);
+  }
 };
 person.sex("man"); //==> chen38 is man
 // equivalent to
@@ -80,7 +80,7 @@ When using the `call` method here, `this` points to the object itself.
    
 {% highlight js %}
 function Person(name) {  
-	this.name = name;  
+  this.name = name;  
 }
 var obj = new Person("chen38");
 console.log(obj.name); //==> chen38

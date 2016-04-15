@@ -7,6 +7,7 @@
 
 // Our variables
 $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+$code-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -234,23 +235,24 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    // border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 0.2em 0.3em;
 }
 
 pre {
     padding: 8px 12px;
     overflow-x: auto;
-
+    background-color: #f7f7f7;
+    font-family: $code-font-family;
     > code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+        font-family: $code-font-family;
     }
 }
 
@@ -673,13 +675,14 @@ pre {
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
-      background: #eef;
+      background-color: rgba(0,0,0,0.04);
+      font-family: $code-font-family;
     }
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
-    .k     { font-weight: bold } // Keyword
-    .o     { font-weight: bold } // Operator
+    .k     { font-weight: normal; color: #ed6a43; } // Keyword
+    .o     { font-weight: bold; color: #a71d5d; } // Operator
     .cm    { color: #998; font-style: italic } // Comment.Multiline
     .cp    { color: #999; font-weight: bold } // Comment.Preproc
     .c1    { color: #998; font-style: italic } // Comment.Single
@@ -697,7 +700,7 @@ pre {
     .gu    { color: #aaa } // Generic.Subheading
     .gt    { color: #a00 } // Generic.Traceback
     .kc    { font-weight: bold } // Keyword.Constant
-    .kd    { font-weight: bold } // Keyword.Declaration
+    .kd    { font-weight: normal; color: #a71d5d; } // Keyword.Declaration
     .kp    { font-weight: bold } // Keyword.Pseudo
     .kr    { font-weight: bold } // Keyword.Reserved
     .kt    { color: #458; font-weight: bold } // Keyword.Type
@@ -722,7 +725,7 @@ pre {
     .sb    { color: #d14 } // Literal.String.Backtick
     .sc    { color: #d14 } // Literal.String.Char
     .sd    { color: #d14 } // Literal.String.Doc
-    .s2    { color: #d14 } // Literal.String.Double
+    .s2    { color: #183691 } // Literal.String.Double
     .se    { color: #d14 } // Literal.String.Escape
     .sh    { color: #d14 } // Literal.String.Heredoc
     .si    { color: #d14 } // Literal.String.Interpol
