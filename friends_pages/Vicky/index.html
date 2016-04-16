@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="icon" href="img/heart1.png" />
+	<title>Vicky - Happy Birthday</title>
+	<style>
+		* {padding: 0;margin: 0;font-family: "Microsoft Yahei";-webkit-user-select: none;-moz-user-select: none;cursor: default;}
+		body {background: #2D2A2A;width: 100%;height: 100%;}
+		@-webkit-keyframes jump {0% {-webkit-transform: scale(1);transform: scale(1);} 30% {-webkit-transform: scale(0.75);transform: scale(0.75);} 50% {-webkit-transform: scale(1.2);transform: scale(1.2);} 100% {-webkit-transform: scale(1);transform: scale(1);} }
+		@keyframes jump {0% {-webkit-transform: scale(1);transform: scale(1);} 30% {-webkit-transform: scale(0.75);transform: scale(0.75);} 50% {-webkit-transform: scale(1.2);transform: scale(1.2);} 100% {-webkit-transform: scale(1);transform: scale(1);} }
+		.animate {animation-name: jump; animation-duration: 0.6s; animation-iteration-count: infinite; animation-direction: alternate;-webkit-animation-name: jump; -webkit-animation-duration: 0.6s; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate;}
+		@-webkit-keyframes hide {from {opacity: 1;} to {opacity: 0;} }
+		@keyframes hide {from {opacity: 1;} to {opacity: 0;} }
+		.hide {animation-name: hide; animation-duration: 1s; animation-iteration-count: 1; animation-direction: normal;-webkit-animation-name: hide; -webkit-animation-duration: 1s; -webkit-animation-iteration-count: 1; -webkit-animation-direction: normal;}
+		@-webkit-keyframes fade {from {opacity: 1;} to {opacity: 0;} }
+		@keyframes fade {from {opacity: 1;} to {opacity: 0;} }
+		.fade {animation-name: fade; animation-duration: 0.56s; animation-iteration-count: infinite; animation-direction: alternate;-webkit-animation-name: fade; -webkit-animation-duration: 0.56s; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: alternate;}
+		#ball {width: 128px; height: 128px; border-radius: 50%; position: absolute; top: 50%; left: 50%; margin: -64px 0 0 -64px; }
+		#text {color: #fff;font-size: 24px;text-align: center;position: relative;top: 300px;}
+		#words {letter-spacing: 1px;}
+		@-webkit-keyframes toHer {0% {-webkit-transform: scale(1);transform: scale(1);} 30% {-webkit-transform: scale(0.75);transform: scale(0.75);} 50% {-webkit-transform: scale(1.2);transform: scale(1.2);} 100% {-webkit-transform: scale(1);transform: scale(1);} }
+		@keyframes toHer {0% {-webkit-transform: scale(1);transform: scale(1);} 30% {-webkit-transform: scale(0.75);transform: scale(0.75);} 50% {-webkit-transform: scale(1.2);transform: scale(1.2);} 100% {-webkit-transform: scale(1);transform: scale(1);} }
+		.toHer {animation-name: toHer; animation-duration: 0.5s; animation-iteration-count: 1; animation-direction: normal;-webkit-animation-name: toHer; -webkit-animation-duration: 0.5s; -webkit-animation-iteration-count: 1; -webkit-animation-direction: normal;}
+		#toher {margin-top:24px;font-size: 32px;display: inline-block;}
+	</style>
+</head>
+<body>
+	<div id="ball">
+		<img src="img/big_heart.png" alt="heart">
+	</div>
+	
+	<!-- 
+		#ef6f67 rgb(239, 111, 103)
+		#46afe4 rgb(70, 175, 228)
+		#81cc7a rgb(129, 204, 122)
+		#ffffff
+	 -->
+	 
+	 <div id="text" style="display:none;">
+		<p><span id="words">在这个特殊的日子里，没有什么比你更重要了。王亚慧生日快乐～开心幸福哦！</span><span class="fade">&#124;</span></p>
+		<p id="toher" style="display:none;">I'm too hot.</p>
+	</div>
+	<audio id="play" preload="load">
+		<source src="img/UptownFunk.mp3" type="audio/mpeg" />
+	</audio>
+	<script>
+		console.log("Wuli Vicky Happy Birthday!");
+		window.onload = function() {
+			get("play").play();
+			get("ball").className = "animate";
+		};
+		var ball = get("ball");
+		setTimeout(function() {
+			fadeOut();
+			setTimeout(function(){
+				ball.style.display = "none";
+				get("text").style.display = "block";
+				setTimeout(function(){
+					type();
+				}, 1000);
+			}, 800);
+		}, 16000);
+		var toher = get("toher");
+		setTimeout(function(){
+			var r1 = parseInt(Math.random() * 150),
+				r2 = parseInt(Math.random() * 150),
+				r3 = parseInt(Math.random() * 150);
+			document.body.style.backgroundColor = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
+			toher.style.display = "inline-block";
+			toher.className = "toHer";
+			setTimeout(function(){
+				toher.className = "";
+			}, 500);
+		}, 33600);
+		her(toher, 37600);
+		her(toher, 41600);
+		her(toher, 45800);
+		function her(obj, time) {
+			setTimeout(function(){
+				obj.className = "toHer";
+				var r1 = parseInt(Math.random() * 120),
+					r2 = parseInt(Math.random() * 160),
+					r3 = parseInt(Math.random() * 200);
+				document.body.style.backgroundColor = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
+				setTimeout(function(){
+					obj.className = "";
+				}, 500);
+			}, time);
+		};
+		var colorTimer;
+		setTimeout(function(){
+			colorTimer = setInterval(function(){
+				var r1 = parseInt(Math.random() * 120),
+					r2 = parseInt(Math.random() * 160),
+					r3 = parseInt(Math.random() * 200);
+				document.body.style.backgroundColor = "rgb(" + r1 + "," + r2 + "," + r3 + ")";
+			}, 60);
+			setTimeout(function(){
+				clearInterval(colorTimer);
+				document.body.style.backgroundColor = "#2D2A2A";
+			}, 6000);
+		}, 67000);
+		var opacity = 10, timer;
+		function fadeOut() {
+			opacity -= 1;
+			if (opacity == -1) {
+				clearTimeout(timer);
+				return;
+			} else {
+				ball.style.opacity = opacity / 10;
+			}
+			timer = setTimeout(fadeOut, 80);
+		}
+		var words = get("words").innerHTML,
+			i = 0, len = words.length;
+		get("words").innerHTML = "";
+		function type() {
+			var random = parseInt(Math.random() * 3),
+				rd = parseInt(Math.random() * 150 + 320);
+			if (random != 0) {
+				if (get("words").innerHTML.length >= len) {
+					return;
+				} else {
+					get("words").innerHTML += words.substr(i, random);
+					i += random;
+				}
+			}
+			var timer = setTimeout(type, rd);
+		}
+		function get(id) {
+			return document.getElementById(id);
+		}
+	</script>
+</body>
+</html>
