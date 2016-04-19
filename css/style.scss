@@ -514,6 +514,12 @@ pre {
     }
   }
 }
+@media only screen (max-width: 980px) {
+  .gotop {
+    display: none;
+  }
+}
+
 .footer-heading {
   font-size: 18px;
   margin-bottom: $spacing-unit / 2;

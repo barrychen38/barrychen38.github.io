@@ -11,13 +11,18 @@ function preloadImg() {
 preloadImg("/img/QRcode.png");
 
 // go top
-$(window).scroll(function(event) {
-	if ($(this).scrollTop() >= 60) {
-		$(".gotop").fadeIn(300);
-	} else {
-		$(".gotop").fadeOut(300);
-	}
-});
+var $currentWidth = $(window).width();
+if ($currentWidth <= 980) {
+	$(".gotop").hide();
+} else {
+	$(window).scroll(function(event) {
+		if ($(this).scrollTop() >= 60) {
+			$(".gotop").fadeIn(300);
+		} else {
+			$(".gotop").fadeOut(300);
+		}
+	});
+}
 $(".gotop").click(function(event) {
 	event.preventDefault();
 	$("html, body").animate({'scrollTop': 0}, 300);
