@@ -1,4 +1,11 @@
-var fileLoad = {
+// preload
+function loadEvent(obj) {
+	var queue = new createjs.LoadQueue(true);
+	queue.on('progress', obj.handProgress, this);
+	queue.on('complete', obj.handComplete, this);
+	queue.loadManifest(obj.que);
+}
+loadEvent({
 	que: [
 		"img/v1.jpg",
 		"img/v2.jpg"
@@ -10,14 +17,8 @@ var fileLoad = {
 	handComplete: function() {
 		$('loadingMask').fadeOut(500);
 	}
-}
-var queue = new createjs.LoadQueue(true);
-queue.on('progress', fileLoad.handProgress, this);
-queue.on('complete', fileLoad.handComplete, this);
-queue.loadManifest(fileLoad.que);
-
+});
+// load complete
 $(function(){
-	
 	$('#heart').addClass('jump');
-	
 });
