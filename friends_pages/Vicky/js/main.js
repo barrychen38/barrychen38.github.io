@@ -1,19 +1,19 @@
 var fileLoad = {
 	que: [
-		"img/UptownFunk.mp3"
+		"img/v1.jpg",
+		"img/v2.jpg"
 	],
 	handProgress: function(e) {
 		var a = parseInt(e.loaded * 100);
-		$('progress').text(a);
+		$('progress').html(a);
 	},
-	handCompelete: function() {
+	handComplete: function() {
 		$('loadingMask').fadeOut(500);
 	}
 }
-
 var queue = new createjs.LoadQueue(true);
 queue.on('progress', fileLoad.handProgress, this);
-queue.on('complete', fileLoad.handCompelete, this);
+queue.on('complete', fileLoad.handComplete, this);
 queue.loadManifest(fileLoad.que);
 
 $(function(){
