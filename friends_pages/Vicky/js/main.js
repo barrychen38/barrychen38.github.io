@@ -8,7 +8,8 @@ function loadEvent(obj) {
 loadEvent({
 	que: [
 		"img/v1.jpg",
-		"img/v2.jpg"
+		"img/v2.jpg",
+		"img/UptownFunk.mp3"
 	],
 	handProgress: function(e) {
 		var a = parseInt(e.loaded * 100);
