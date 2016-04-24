@@ -3,7 +3,8 @@ var fileLoad = {
 		"img/UptownFunk.mp3"
 	],
 	handProgress: function(e) {
-		$('progress').text(e.loaded);
+		var a = parseInt(e.loaded * 100);
+		$('progress').text(a);
 	},
 	handCompelete: function() {
 		$('loadingMask').fadeOut(500);
