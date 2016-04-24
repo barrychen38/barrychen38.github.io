@@ -12,10 +12,10 @@ loadEvent({
 	],
 	handProgress: function(e) {
 		var a = parseInt(e.loaded * 100);
-		$('progress').html(a);
+		$('.progress').html(a);
 	},
 	handComplete: function() {
-		$('loadingMask').fadeOut(500);
+		$('.loadingMask').fadeOut(500);
 	}
 });
 // load complete
