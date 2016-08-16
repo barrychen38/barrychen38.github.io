@@ -634,7 +634,7 @@ pre {
   margin: $spacing-unit 0;
 }
 .post-title {
-  font-size: 48px;
+  font-size: 40px;
   text-align: center;
   font-family: "PT Sans";
   font-weight: 900;
@@ -646,10 +646,10 @@ pre {
   margin-bottom: $spacing-unit;
   padding-bottom: 3em !important;
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   h2 {
-    font-size: 32px;
+    font-size: 24px;
     @include media-query($on-laptop) {
       font-size: 28px;
     }
