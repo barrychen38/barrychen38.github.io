@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=640,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>EaselJS - basic</title>
+</head>
+<body>
+	
+	<canvas id="view" width="640" height="1040"></canvas>
+	
+	<script type="text/javascript" src="js/easeljs.min.js"></script>
+	
+	<script>
+		
+		var stage = new createjs.Stage('view');
+		
+		// createjs.Touch.enable(stage);
+		// createjs.Ticker.addEventListener('tick', stage);
+		// createjs.Ticker.setFPS(20); // 数值一般不需要大于60
+		// createjs.Ticker.timingMode = createjs.Ticker.RAF; // 直接使用RAF
+		
+		var rect = new createjs.Shape();
+		rect.graphics.beginFill('#fc0').drawRect(0, 0, 120, 50);
+		
+		var circle = new createjs.Shape();
+		circle.graphics.beginFill('#000').drawCircle(0, 0, 80);
+		circle.set({
+			x: 80,
+			y: 140
+		});
+		
+		var radius = new createjs.Shape();
+		radius.graphics.setStrokeStyle(6).beginStroke('#405261').arc(0, 0, 50, 0, Math.PI * 2);
+		radius.x = 56;
+		radius.y = 280;
+		
+		var text = new createjs.Text('Hello World!', '40px Arail', 'blue');
+		text.set({
+			x: 120,
+			y: 0
+		})
+		
+		stage.addChild(rect, circle, radius, text);
+		
+		stage.update();
+				
+	</script>
+			
+</body>
+</html>

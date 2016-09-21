@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=640,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>EaselJS - sprite</title>
+</head>
+<body>
+	
+	<canvas id="view" width="640" height="1040"></canvas>
+	
+	<script type="text/javascript" src="js/easeljs.min.js"></script>
+	<script type="text/javascript" src="js/preloadjs.min.js"></script>
+	
+	<script>
+		
+		var queue = [{id: 't29', src: 'T_29.jpg'}, {id: 't30', src: 'T_30.jpg'}, {id: 't31', src: 'T_31.jpg'}, {id: 't32', src: 'T_32.jpg'}, {id: 't33', src: 'T_33.jpg'}, {id: 't34', src: 'T_34.jpg'}, {id: 't35', src: 'T_35.jpg'}, {id: 't36', src: 'T_36.jpg'}, {id: 't37', src: 'T_37.jpg'}, {id: 't38', src: 'T_38.jpg'}, {id: 't39', src: 'T_39.jpg'}, {id: 't40', src: 'T_40.jpg'}, {id: 't41', src: 'T_41.jpg'}, {id: 't42', src: 'T_42.jpg'}, {id: 't43', src: 'T_43.jpg'}, {id: 't44', src: 'T_44.jpg'}, {id: 't45', src: 'T_45.jpg'}, {id: 't46', src: 'T_46.jpg'}, {id: 't47', src: 'T_47.jpg'}, {id: 't48', src: 'T_48.jpg'}, {id: 't49', src: 'T_49.jpg'}, {id: 't50', src: 'T_50.jpg'}, {id: 't51', src: 'T_51.jpg'}, {id: 't52', src: 'T_52.jpg'}, {id: 't53', src: 'T_53.jpg'}, {id: 't54', src: 'T_54.jpg'}, {id: 't55', src: 'T_55.jpg'}, {id: 't56', src: 'T_56.jpg'}, {id: 't57', src: 'T_57.jpg'}, {id: 't58', src: 'T_58.jpg'}, {id: 't59', src: 'T_59.jpg'}, {id: 't60', src: 'T_60.jpg'}, {id: 't61', src: 'T_61.jpg'}, {id: 't62', src: 'T_62.jpg'}, {id: 't63', src: 'T_63.jpg'}, {id: 't64', src: 'T_64.jpg'}, {id: 't65', src: 'T_65.jpg'}, {id: 't65', src: 'T_65.jpg'}, {id: 't66', src: 'T_66.jpg'}, {id: 't67', src: 'T_67.jpg'}, {id: 't68', src: 'T_68.jpg'}, {id: 't69', src: 'T_69.jpg'}, {id: 't70', src: 'T_70.jpg'}, {id: 't71', src: 'T_71.jpg'}, {id: 't72', src: 'T_72.jpg'}, {id: 't73', src: 'T_73.jpg'}, {id: 't74', src: 'T_74.jpg'}, {id: 't75', src: 'T_75.jpg'}, {id: 't76', src: 'T_76.jpg'}, {id: 't77', src: 'T_77.jpg'}, {id: 't78', src: 'T_78.jpg'}, {id: 't79', src: 'T_79.jpg'}, {id: 't80', src: 'T_80.jpg'}, {id: 't81', src: 'T_81.jpg'}, {id: 't82', src: 'T_82.jpg'}, {id: 't83', src: 'T_83.jpg'}, {id: 't84', src: 'T_84.jpg'}, {id: 't85', src: 'T_85.jpg'}, {id: 't86', src: 'T_86.jpg'}, {id: 't87', src: 'T_87.jpg'}, {id: 't88', src: 'T_88.jpg'}, {id: 't89', src: 'T_89.jpg'}, {id: 't90', src: 'T_90.jpg'}, {id: 't91', src: 'T_91.jpg'}, {id: 't92', src: 'T_92.jpg'}, {id: 't93', src: 'T_93.jpg'}, {id: 't94', src: 'T_94.jpg'}, {id: 't95', src: 'T_95.jpg'}, {id: 't96', src: 'T_96.jpg'}, {id: 't97', src: 'T_97.jpg'}, {id: 't98', src: 'T_98.jpg'}, {id: 't99', src: 'T_99.jpg'}, {id: 't100', src: 'T_100.jpg'}, {id: 't102', src: 'T_102.jpg'}, {id: 't103', src: 'T_103.jpg'}, {id: 't104', src: 'T_104.jpg'}, {id: 't105', src: 'T_105.jpg'}, {id: 't106', src: 'T_106.jpg'}, {id: 't107', src: 'T_107.jpg'}, {id: 't108', src: 'T_108.jpg'}, {id: 't109', src: 'T_109.jpg'}, {id: 't110', src: 'T_110.jpg'}, {id: 't111', src: 'T_111.jpg'}, {id: 't112', src: 'T_112.jpg'}, {id: 't113', src: 'T_113.jpg'}, {id: 't114', src: 'T_114.jpg'}, {id: 't115', src: 'T_115.jpg'}, {id: 't116', src: 'T_116.jpg'}, {id: 't117', src: 'T_117.jpg'}, {id: 't118', src: 'T_118.jpg'}, {id: 't119', src: 'T_119.jpg'}, {id: 't120', src: 'T_120.jpg'}, {id: 't121', src: 'T_121.jpg'}, {id: 't122', src: 'T_122.jpg'}, {id: 't123', src: 'T_123.jpg'}, {id: 't124', src: 'T_124.jpg'}, {id: 't125', src: 'T_125.jpg'}, {id: 't126', src: 'T_126.jpg'}, {id: 't127', src: 'T_127.jpg'}, {id: 't128', src: 'T_128.jpg'}, {id: 't129', src: 'T_129.jpg'}, {id: 't130', src: 'T_130.jpg'}, {id: 't131', src: 'T_131.jpg'}, {id: 't132', src: 'T_132.jpg'}, {id: 't133', src: 'T_133.jpg'}, {id: 't134', src: 'T_134.jpg'}, {id: 't135', src: 'T_135.jpg'}, {id: 't136', src: 'T_136.jpg'}, {id: 't137', src: 'T_137.jpg'}, {id: 't138', src: 'T_138.jpg'}, {id: 't139', src: 'T_139.jpg'}, {id: 't140', src: 'T_140.jpg'}, {id: 't141', src: 'T_141.jpg'}, {id: 't142', src: 'T_142.jpg'}, {id: 't143', src: 'T_143.jpg'}, {id: 't144', src: 'T_144.jpg'}, {id: 't145', src: 'T_145.jpg'}, {id: 't146', src: 'T_146.jpg'}, {id: 't147', src: 'T_147.jpg'}, {id: 't148', src: 'T_148.jpg'}, {id: 't149', src: 'T_149.jpg'}, {id: 't150', src: 'T_150.jpg'}, {id: 't151', src: 'T_151.jpg'}, {id: 't152', src: 'T_152.jpg'}, {id: 't153', src: 'T_153.jpg'}, {id: 't154', src: 'T_154.jpg'}, {id: 't155', src: 'T_155.jpg'}, {id: 't156', src: 'T_156.jpg'}, {id: 't157', src: 'T_157.jpg'}, {id: 't158', src: 'T_158.jpg'}, {id: 't159', src: 'T_159.jpg'}, {id: 't160', src: 'T_160.jpg'}, {id: 't161', src: 'T_161.jpg'}, {id: 't162', src: 'T_162.jpg'}, {id: 't163', src: 'T_163.jpg'}, {id: 't164', src: 'T_164.jpg'}, {id: 't165', src: 'T_165.jpg'}, {id: 't166', src: 'T_166.jpg'}, {id: 't167', src: 'T_167.jpg'}, {id: 't168', src: 'T_168.jpg'}, {id: 't169', src: 'T_169.jpg'}, {id: 't170', src: 'T_170.jpg'}, {id: 't171', src: 'T_171.jpg'}, {id: 't172', src: 'T_172.jpg'}, {id: 't173', src: 'T_173.jpg'}, {id: 't174', src: 'T_174.jpg'}, {id: 't175', src: 'T_175.jpg'}, {id: 't176', src: 'T_176.jpg'}, {id: 't177', src: 'T_177.jpg'}, {id: 't178', src: 'T_178.jpg'}, {id: 't179', src: 'T_179.jpg'}, {id: 't180', src: 'T_180.jpg'}, {id: 't181', src: 'T_181.jpg'}, {id: 't182', src: 'T_182.jpg'}, {id: 't183', src: 'T_183.jpg'}, {id: 't184', src: 'T_184.jpg'}, {id: 't185', src: 'T_185.jpg'}, {id: 't186', src: 'T_186.jpg'}, {id: 't187', src: 'T_187.jpg'}, {id: 't188', src: 'T_188.jpg'}, {id: 't189', src: 'T_189.jpg'}, {id: 't190', src: 'T_190.jpg'}, {id: 't191', src: 'T_191.jpg'}, {id: 't192', src: 'T_192.jpg'}, {id: 't193', src: 'T_193.jpg'}, {id: 't194', src: 'T_194.jpg'}, {id: 't195', src: 'T_195.jpg'}, {id: 't196', src: 'T_196.jpg'}, {id: 't197', src: 'T_197.jpg'}, {id: 't198', src: 'T_198.jpg'}, {id: 't199', src: 'T_199.jpg'}, {id: 't200', src: 'T_200.jpg'}, {id: 't201', src: 'T_201.jpg'}, {id: 't202', src: 'T_202.jpg'}, {id: 't203', src: 'T_203.jpg'}, {id: 't204', src: 'T_204.jpg'}, {id: 't205', src: 'T_205.jpg'}, {id: 't206', src: 'T_206.jpg'}, {id: 't207', src: 'T_207.jpg'}, {id: 't208', src: 'T_208.jpg'}, {id: 't209', src: 'T_209.jpg'}, {id: 't210', src: 'T_210.jpg'}, {id: 't211', src: 'T_211.jpg'}, {id: 't212', src: 'T_212.jpg'}, {id: 't213', src: 'T_213.jpg'}, {id: 't214', src: 'T_214.jpg'}, {id: 't215', src: 'T_215.jpg'}, {id: 't216', src: 'T_216.jpg'} ];
+		
+		var stage = new createjs.Stage('view');
+		createjs.Ticker.timingMode = createjs.Ticker.RAF;
+		createjs.Ticker.addEventListener('tick', stage);
+		
+		var w = stage.canvas.width,
+			h = stage.canvas.height;
+			
+		var text = new createjs.Text();
+		text.set({
+			font: '32px Arial',
+			color: '#405261',
+			y: 120
+		});
+		
+		var rect_percent = new createjs.Shape();
+		rect_percent.graphics.beginFill('#405261').drawRect(0, 0, 100, 10).endFill();
+		rect_percent.x = w - 100 >> 1;
+		rect_percent.y = 180;
+		rect_percent.scaleX = 0;
+		
+		var percent_bg = new createjs.Shape();
+		percent_bg.graphics.beginFill('#ddd').drawRect(0, 0, 100, 10).endFill();
+		percent_bg.x = rect_percent.x;
+		percent_bg.y = rect_percent.y;
+		
+		var circle_percent = new createjs.Shape();
+		circle_percent.x = w - 100 >> 1;
+		circle_percent.y = 270;
+		
+		stage.addChild(text, percent_bg, rect_percent, circle_percent);
+		
+		var loader = new createjs.LoadQueue(false, 'assets/v1/');
+		loader.on('fileload', handleFileload);
+		loader.loadManifest(queue);
+		
+		function handleFileload() {
+			var p = loader._numItemsLoaded / loader._numItems,
+				percent = Math.floor(p * 100);
+			// console.log(percent);
+			text.text = percent + '%';
+			text.x = w - text.getMeasuredWidth() >> 1;
+			rect_percent.scaleX = p;
+			circle_percent.graphics.setStrokeStyle(6).beginStroke('#405261').arc(50, 0, 50, (2*p-1/2) * Math.PI, (2*(p*100+1)/100-1/2) * Math.PI);
+		}
+			
+	</script>
+			
+</body>
+</html>
