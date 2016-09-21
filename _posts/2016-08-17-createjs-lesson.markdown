@@ -23,7 +23,7 @@ var stage = new createjs.Stage('view'); // 写入 canvas 的 id
 
 先在 `canvas` 元素之上创建一个舞台，之后一切要表演的东西就都在这个上面了。
 
-然后运用里面封装好的方法就可以随便自己画了，简单代码见 [basic.html](/demo/createjs/basic.html)。
+然后运用里面封装好的方法就可以随便自己画了，简单代码见 [easel.html](/demo/createjs/easel.html)。
 
 Ps: 几个注意点
 
