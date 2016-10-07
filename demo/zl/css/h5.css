@@ -45,7 +45,7 @@ a.arr{position:absolute;z-index:100;bottom: 30px;left:50%;margin-left:-45px;-web
 .s1.cur .im3{-webkit-animation:slideFadeIn 1.5s 1.0s forwards;animation:slideFadeIn 1.5s 1.0s forwards;}
 .s1.cur .im4{-webkit-animation:slideFadeIn 1.5s 1.0s forwards;animation:slideFadeIn 1.5s 1.0s forwards;}
 .s1.cur .im5{-webkit-animation:slideFadeIn 1.5s 1.0s forwards;animation:slideFadeIn 1.5s 1.0s forwards;}
-.s1.cur .im6{-webkit-animation:fadeInUp .16s .4s forwards;animation:fadeInUp 1.6s .4s forwards;}
+.s1.cur .im6{-webkit-animation:fadeInUp 2.4s .4s forwards;animation:fadeInUp 2.4s .4s forwards;}
 .s1.cur .im6 img{-webkit-animation:yy 4s .8s linear infinite;animation:yy 4s .8s linear infinite;}
 .s1.cur .im7 {-webkit-animation:fadeInUp 1.6s .4s forwards;animation:fadeInUp 1.6s .4s forwards;}
 /*.s1.cur .im8{-webkit-animation:fadeIn .6s 1.8s forwards;animation:fadeIn .6s 1.8s forwards;}
