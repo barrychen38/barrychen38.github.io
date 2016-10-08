@@ -499,7 +499,7 @@ a.arr{position:absolute;z-index:100;bottom: 30px;left:50%;margin-left:-45px;-web
 .s9{background: url(../images/p2.png) center bottom no-repeat; background-size: cover;}
 .s9 img {opacity: 0;}
 .s9.cur .title {float: right;margin-top: 50px;-webkit-animation:slideFadeIn 1s .2s forwards;animation:slideFadeIn 1s .2s forwards;}
-.s9.cur .content {margin: 80px auto 0;-webkit-animation:rotateSlide2 1.6s .6s forwards;animation:rotateSlide2 1.6s .6s forwards;transform: translate(999px, -999px) rotate(30deg);-webkit-transform: translate(999px, -999px) rotate(30deg);}
+.s9.cur .content {margin: 80px auto 0;-webkit-animation:rotateSlide1 1.6s .6s forwards;animation:rotateSlide1 1.6s .6s forwards;transform: translate(-999px, 999px) rotate(-30deg);-webkit-transform: translate(-999px, 999px) rotate(-30deg);}
 .s9.cur .bottom {position: absolute;left: 0;bottom: 0;-webkit-animation:fadeInUp 1.2s 1.6s forwards;animation:fadeInUp 1.2s 1.6s forwards;}
 @-webkit-keyframes shake {
 	0%, 100% {-webkit-transform: translateX(0); opacity: 1;}
