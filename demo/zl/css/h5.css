@@ -496,6 +496,7 @@ a.arr{position:absolute;z-index:100;bottom: 30px;left:50%;margin-left:-45px;-web
 .s11.cur .im4{-webkit-animation:zoomIn 1.2s 1.6s forwards;animation:zoomIn 1.2s 1.6s forwards;}
 .s11.cur .im5{-webkit-animation:zoomIn 1.2s 1.6s forwards;animation:zoomIn 1.2s 1.6s forwards;}
 .s11.cur .im6{-webkit-animation:zoomIn 1.2s 1.6s forwards;animation:zoomIn 1.2s 1.6s forwards;}
+.s11.cur .im7{-webkit-animation:fadeIn .6s 2.8s forwards;animation:fadeIn .6s 2.8s forwards;}
 .s9{background: url(../images/p2.png) center bottom no-repeat; background-size: cover;}
 .s9 img {opacity: 0;}
 .s9.cur .title {float: right;margin-top: 50px;-webkit-animation:slideFadeIn 1s .2s forwards;animation:slideFadeIn 1s .2s forwards;}
