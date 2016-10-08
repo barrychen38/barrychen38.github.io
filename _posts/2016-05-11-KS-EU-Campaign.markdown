@@ -5,8 +5,6 @@ date:   2016-05-11 22:23:17 +0800
 categories: record study
 ---
 
-## Kerastase EU Campaign 心得
-
 项目从3月10号正式开始，到4月5日下午5点正式上线。上线之前有一大堆的测试，一大堆的逻辑修改，到上线之前大致上是没有什么问题的，但是上线之后，要加 **tracking code**， 要加 **from**参数（微信自己在分享出去页面链接后面自动加上，用来区分此链接的来源：**Timeline**，**Groupmessage**，**Singlemessage**，最后还是取消，搞的烦死。）。总之是改改改，累累累，但是做完之后也是有一大笔财富经历在里面，觉得可以记录一下。下面写出了在项目中使用的几个小插件的使用方法和遇到的坑。
 
 ### [Fabric.js](https://github.com/kangax/fabric.js/)
