@@ -6,7 +6,7 @@ window.onload = function() {
 	
 	var width = document.body.clientWidth;
 	
-	// randomColor();
+	randomColor();
 	randomDrop();
 	
 	
