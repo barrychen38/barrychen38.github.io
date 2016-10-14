@@ -6,9 +6,12 @@ window.onload = function() {
 	
 	var width = document.body.clientWidth;
 	
-	randomColor();
-	randomDrop();
-	
+	var preload = new Image();
+	preload.src = 'HaP.png';
+	preload.onload = function() {
+		randomColor();
+		randomDrop();
+	}
 	
 	function randomColor() {
 		var r = Math.floor(Math.random() * 255),
@@ -26,9 +29,7 @@ window.onload = function() {
 			image[i].style.top = -Math.floor(Math.random() * 1200) + 'px';
 			image[i].style.left = Math.floor(Math.random() * width) + 'px';
 			var delay = Math.floor(Math.random() * 100);
-			// setTimeout(function() {
-				image[i].className = 'drop';
-			// }, delay);
+			image[i].className = 'drop';
 		}
 	}
 	
