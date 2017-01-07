@@ -32,6 +32,7 @@ $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
+$on-less-than-wrapper: 1024px;
 
 
 
@@ -599,6 +600,11 @@ pre {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width: calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+@include media-query($on-less-than-wrapper) {
+  .gotop {
+    display: none
   }
 }
 /**
