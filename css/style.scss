@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $text-color !important;
+    color: $text-color;
     text-decoration: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -170,43 +170,43 @@ a {
       outline: none;
     }
     
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    // &:visited {
+    //     color: darken($brand-color, 15%);
+    // }
 
     &:hover {
         color: $text-color !important;
-        border-bottom: 1px dotted $text-color;
+        border-bottom: 1px solid $text-color;
     }
 
     &.page-link{
       font-family: $base-font-family;
       &:hover {
           color: $text-color !important;
-          border-bottom: 1px dotted $a-hover-color;
+          border-bottom: 1px solid $text-color;
       }
     }
     &.postLink{
       color: $text-color !important;
       &:hover {
           color: $text-color !important;
-          border-bottom: 1px dotted $text-color;
+          border-bottom: 1px solid $text-color;
       }
 
-      &:visited {
-          color: "crimson" !important;
-      }
+      // &:visited {
+      //     color: "crimson" !important;
+      // }
     }
     &.post-title-link{
       color: $text-color !important;
       &:hover {
           color: $text-color !important;
-          border-bottom: 1px dotted $text-color;
+          border-bottom: 1px solid $text-color;
       }
 
-      &:visited {
-          color: "crimson" !important;
-      }
+      // &:visited {
+      //     color: "crimson" !important;
+      // }
     }
 }
 
@@ -571,6 +571,9 @@ $a-hover-color: #4078c0;
   color: #828282;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
+  a {
+    color: #828282;
+  }
 }
 .footer-content {
   font-family: "Josefin Sans";
