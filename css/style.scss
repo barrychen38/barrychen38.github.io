@@ -159,9 +159,8 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
-$a-hove-color: #4078c0;
 a {
-    color: $a-hove-color !important;
+    color: $text-color !important;
     text-decoration: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -176,22 +175,22 @@ a {
     }
 
     &:hover {
-        color: $a-hove-color !important;
-        border-bottom: 1px dotted $a-hove-color;
+        color: $text-color !important;
+        border-bottom: 1px dotted $text-color;
     }
 
     &.page-link{
       font-family: $base-font-family;
       &:hover {
-          color: $a-hove-color !important;
-          border-bottom: 1px dotted $a-hove-color;
+          color: $text-color !important;
+          border-bottom: 1px dotted $a-hover-color;
       }
     }
     &.postLink{
       color: $text-color !important;
       &:hover {
-          color: $a-hove-color !important;
-          border-bottom: 1px dotted $a-hove-color;
+          color: $text-color !important;
+          border-bottom: 1px dotted $text-color;
       }
 
       &:visited {
@@ -201,8 +200,8 @@ a {
     &.post-title-link{
       color: $text-color !important;
       &:hover {
-          color: $a-hove-color !important;
-          border-bottom: 1px dotted $a-hove-color;
+          color: $text-color !important;
+          border-bottom: 1px dotted $text-color;
       }
 
       &:visited {
@@ -298,7 +297,7 @@ pre {
 }
 
 
-
+$a-hover-color: #4078c0;
 /**
  * Icons
  */
@@ -323,6 +322,9 @@ pre {
   font-size: 16px;
   font-weight: 300;
   padding-top: 0;
+  a {
+    color: $a-hover-color;
+  }
 }
 .download {
   padding: 10px;
@@ -676,6 +678,7 @@ pre {
   padding-bottom: 3em !important;
   p {
     font-size: 1rem;
+    line-height: 1.6;
   }
   h2 {
     font-size: 24px;

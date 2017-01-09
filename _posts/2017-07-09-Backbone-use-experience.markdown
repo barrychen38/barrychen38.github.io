@@ -21,7 +21,7 @@ categories: record study
 
 `Backbone` 主要由下面四个部分组成，相互配合利用，所有的方法都是*扩展再实例化*，全局暴露对象 `Backbone` 上也有相应的方法。
 
-### 模型 (Model)
+#### 模型 (Model)
 
 通俗来讲就是个对象集合，可以看成数据库里的一条数据。这些数据可以通过视图展示在页面上。调用形式：
 
@@ -44,7 +44,7 @@ var newModel = new NewModel({
 
 从服务器端拉取数据用到的是 `fetch` 方法，但是之前说过模型只是一条数据，当有多条数据的时候模型是不实际的，所以要讲下面的部分。
 
-### 集合 (Collection)
+#### 集合 (Collection)
 
 如果模型是数据库里的一条数据，那么集合可以看成数据库的表，是众多模型的集合。所以集合会有模型的方法，也会有模型没有的方法。调用形式：
 
@@ -72,7 +72,7 @@ var newCollection = new NewCollection([
 
 由于集合实际上是一个模型的数组集合，因此也代理了 `Underscore` 上的多数的数组方法，因此循环的时候每一个 `item` 就是一个模型了，对于数据的处理也很有帮助，有点像从 `MySQL` 里取数据的感觉。数据存储方面讲完了，接下来就是要显示出来了。
 
-### 视图 (View)
+#### 视图 (View)
 
 说简单点就是 `HTML` 的渲染和元素事件的绑定，写在那个视图里瞬间清爽了许多。调用形式：
 
@@ -109,17 +109,17 @@ Backbone.trigger('toggle');
 
 创建视图的时候会默认在模板文件的最外面包裹一层，默认是 `div`，所以我们可以指定他的 `id` 和 `className` 以及 `tagName`，方便我们放样式。也有一个 `initialize` 的函数，用来监听些事件啥的，看自己需要，这边只是一个例子。`render` 函数是必须的，也就是编译模板文件。可以默认使用 `Underscore` 的模板语法，也可以使用其他的，最后输出能识别的 `HTML` 就行了。我就直接使用默认语法了，和 `ejs` 一样。给个示例：
 
-{% highlight html %}
-<span><% name %></span>
+{% highlight ejs %}
+<span><%= name %></span>
 {% endhighlight %}
 
-`<% %>` 把它看成 `{{ }}` 就好了，一样的。中间有个 `=` 表示这是个变量，没有的就是 `js` 执行语句了，还有个 `-` 的表示里面以 `HTML` 的形式输出，比较少用，你懂的。其中的 `name` 其实就是我们实例化渲染的时候带入的数据，最后的输出结果应该知道，更多的语法看[这里](http://underscorejs.org/#template)吧。
+`<% %>` 把它看成 `\{\{\ \}\}` 就好了，一样的。中间有个 `=` 表示这是个变量，没有的就是 `js` 执行语句了，还有个 `-` 的表示里面以 `HTML` 的形式输出，比较少用，你懂的。其中的 `name` 其实就是我们实例化渲染的时候带入的数据，最后的输出结果应该知道，更多的语法看[这里](http://underscorejs.org/#template)吧。
 
 `events` 里就是对模板元素的事件绑定，函数里写啥应该都会，但是注意 `this` 指向的是定义的 `NewView`，所以不要使用 `$(this)`，会报错。
 
-其他的就是一些定义的事件，监听和触发。
+其他的就是一些定义的事件，包括监听和触发。
 
-### 路由 (Router)
+#### 路由 (Router)
 
 通过监听域名地址的 `hash` 值的变化来跳转试图，可以保留当前视图的状态，有点神奇。调用形式：
 
@@ -157,7 +157,35 @@ newRouter.navigate('search', {
 });
 {% endhighlight %}
 
+首先指定路由，我这边给出的例子很简单，就是 `hash` 值为空的时候，执行 `index` 函数，`search` 值的时候执行 `search` 函数。对应的函数中的其实只是改变 `body` 元素中的内容，所以我们需要配置的就这么多。四个部分有序的组合起来就可以变成一个比较看的过去的 `SPA` 了。
 
+#### 其他
+
+项目中用了 `requirejs` 来模块化 `js` 文件，`backbone` 的源码中有些 `AMD` 模式的支持，但是默认是依赖于 `jQuery` 的，我取出来了可以看下：
+
+{% highlight js %}
+if (typeof define === 'function' && define.amd) {
+	define(['underscore', 'jquery', 'exports'], function(_, $, exports) {
+		// Export global even in AMD case in case this script is loaded with
+		// others that may still expect a global Backbone.
+		root.Backbone = factory(root, exports, _, $);
+	});
+}
+{% endhighlight %}
+
+作者写了这个库的依赖，然后把全局的 `Backbone` 对象暴露出去，以至于加载之前会先加载 `underscore` 和 `jquery`，所以我们耍赖把 `Zepto` 的别名设置为 `jquery`，如下：
+
+{% highlight js %}
+require.config({
+	baseUrls: './',
+	paths: {
+		'jquery': 'vendor/js/zepto'
+	}
+});
+{% endhighlight %}
+
+这样就可以大大减小压缩的代码了。
 
 ### 总结
 
+其实我开始写之前对于这个库并不是特别熟，看了很多的例子和教学视频才开始上手写，写的过程中也是边看文档编写。到现在写下来之后，发现自己终于有点理解了，虽然配置起来很烦，需要写很多东西，但框架本身的思想值得我们学习，写到后来你会发现其实很有意思，绕来绕去终于出现了自己想要的结果，运行成功的一刹那真是开心极了。整篇文章写的不是特别详细，但是基本用法都有了，用到的也就这么多，更多的还是需要自己看文档学习。现在写这篇文章可能证明了我真的在前端技术这块落后很多了，别人用 `Vue`，我用 `Backbone`，别人用 `Webpack`，我用 `Gulp`，能提高效率就好，能自动化就好，能实现效果就好，客户才不管你代码写怎么样～
