@@ -6,8 +6,8 @@
 
 
 // Our variables
-$base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
-$code-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$base-font-family: Helvetica, "Microsoft Yahei", "PT Sans", Arial, sans-serif;
+$code-font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -159,8 +159,9 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Links
  */
+$a-hove-color: #4078c0;
 a {
-    color: #828282 !important;
+    color: $a-hove-color !important;
     text-decoration: none;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -175,22 +176,22 @@ a {
     }
 
     &:hover {
-        color: $text-color !important;
-        border-bottom: 1px dotted #000 ;
+        color: $a-hove-color !important;
+        border-bottom: 1px dotted $a-hove-color;
     }
 
     &.page-link{
       font-family: $base-font-family;
       &:hover {
-          color: $text-color !important;
-          border-bottom: 1px dotted #000 ;
+          color: $a-hove-color !important;
+          border-bottom: 1px dotted $a-hove-color;
       }
     }
     &.postLink{
       color: $text-color !important;
       &:hover {
-          color: $text-color !important;
-          border-bottom: 1px dotted #000 ;
+          color: $a-hove-color !important;
+          border-bottom: 1px dotted $a-hove-color;
       }
 
       &:visited {
@@ -200,8 +201,8 @@ a {
     &.post-title-link{
       color: $text-color !important;
       &:hover {
-          color: $text-color !important;
-          border-bottom: 1px dotted #000 ;
+          color: $a-hove-color !important;
+          border-bottom: 1px dotted $a-hove-color;
       }
 
       &:visited {
@@ -246,7 +247,8 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: auto;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     background-color: #f7f7f7;
     font-family: $code-font-family;
     > code {
