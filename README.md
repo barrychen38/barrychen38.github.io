@@ -32,9 +32,9 @@
 
 ### 个人技能
 
-| HTMl + CSS | JavaScript | PhotoShop |
-| :--------: | :--------: | :-------: |
-|     88     |     72     |    36     |
+| HTMl + CSS | JavaScript | PhotoShop |    Git    |
+| :--------: | :--------: | :-------: | :-------: |
+|     88     |     72     |    32     |     64    |
 
 作为一名前端工程师[小学生]，无非是这三块东西，所以我合并在了一起，比较清晰。最关键的还是围绕 `JavaScript` 这个展开的，什么自动化工具啊框架啊，所以这个学好很重要。
 
@@ -62,3 +62,4 @@
 [8]: https://github.com/Chen38/measurejs
 [9]: https://github.com/Chen38/gulp_campaign
 [10]: https://github.com/Chen38/sublime-config
+

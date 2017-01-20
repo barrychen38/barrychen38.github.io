@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Backbone 学习记录"
-date:   2017-07-09 16:42:05 +0800
+date:   2017-01-09 16:42:05 +0800
 categories: record study
 ---
 
