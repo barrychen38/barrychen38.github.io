@@ -28,7 +28,7 @@ function Student(name,age,sex) {
 }
 var student = new Student("chen38",22,"man");
 console.log("name:" + student.name + " age:" + student.age + " sex:" + student.sex);
-//==> name:chen38 age:22 sex:man
+//=> name:chen38 age:22 sex:man
 {% endhighlight %}
 	
 * ##### `call` method: have the same meaning with `apply`, but it is not the same parameter list
@@ -43,7 +43,7 @@ console.log("name:" + student.name + " age:" + student.age + " sex:" + student.s
 function print(word) {
   console.log(this + word);
 }
-print.call("Hello ", "World!"); //==> Hello World!
+print.call("Hello ", "World!"); //=> Hello World!
 {% endhighlight %}
     
 Generally speaking, `functionName(arg)` can be directly replaced by `functionName.call(window, arg)`, this makes it clear where the various parameters are pointing
@@ -69,9 +69,9 @@ var person = {
     console.log(this.name + " is " + sex);
   }
 };
-person.sex("man"); //==> chen38 is man
+person.sex("man"); //=> chen38 is man
 // equivalent to
-person.sex.call(person, "man"); //==> chen38 is man
+person.sex.call(person, "man"); //=> chen38 is man
 {% endhighlight %}
 
 When using the `call` method here, `this` points to the object itself.
@@ -80,10 +80,10 @@ When using the `call` method here, `this` points to the object itself.
    
 {% highlight js %}
 function Person(name) {  
-  this.name = name;  
+  this.name = name;
 }
 var obj = new Person("chen38");
-console.log(obj.name); //==> chen38
+console.log(obj.name); //=> chen38
 {% endhighlight %}
 
 The key is to understand the `new` operator (not explained in detail):
@@ -97,8 +97,8 @@ Person.call(obj);
 From above we can figure out `this` method:
    
 {% highlight js %}
-functionName(arg) ==> functionName.call(window, arg)
+functionName(arg) => functionName.call(window, arg)
 {% endhighlight %}
 {% highlight js %}
-obj.functionName(arg) ==> obj.functionName.call(obj, arg)
+obj.functionName(arg) => obj.functionName.call(obj, arg)
 {% endhighlight %}

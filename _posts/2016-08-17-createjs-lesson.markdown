@@ -124,11 +124,11 @@ stage.addChild(mc);
 
 {% highlight js %}
 mc.timeline.addTween(
-     createjs.Tween.get(target1)
-         .to({x:0}).to({x:60}, 50).to({x:0}, 50));
+  createjs.Tween.get(target1)
+  .to({x:0}).to({x:60}, 50).to({x:0}, 50));
 mc.timeline.addTween(
-     createjs.Tween.get(target2)
-         .to({x:60}).to({x:0}, 50).to({x:60}, 50));
+  createjs.Tween.get(target2)
+  .to({x:60}).to({x:0}, 50).to({x:60}, 50));
 {% endhighlight %}
 
 我们给这个影片剪辑的时间线添加了两个动画，实现的效果上就是两个物体来回运动，我们可以设置运动的开始播放位置了：
@@ -163,11 +163,11 @@ PS：另外看到别人写的可以用来播放动画帧的效果，也是需要
 var mc = new createjs.MovieClip(null, 0, true, {start:20});
 stage.addChild(mc);
 mc.timeline.addTween(createjs.Tween.get({})
-    .to({state:[{t:target_1}]})
-    .to({state:[{t:target_2}]},3)
-    .to({state:[{t:target_3}]},3)
-    .to({state:[{t:target_4}]},3)
-    .to({state:[{t:target_5}]},3).wait(3));
+  .to({state:[{t:target_1}]})
+  .to({state:[{t:target_2}]},3)
+  .to({state:[{t:target_3}]},3)
+  .to({state:[{t:target_4}]},3)
+  .to({state:[{t:target_5}]},3).wait(3));
 {% endhighlight %}
 
 事实上我到现在还没有摸索清楚这个写法，为什么这样就可以了呢。里面的 `target` 是需要 *Bitmap* 元素的，而不是 *DOM*  对象。

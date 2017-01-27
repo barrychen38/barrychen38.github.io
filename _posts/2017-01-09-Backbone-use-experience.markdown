@@ -27,14 +27,14 @@ categories: record study
 
 {% highlight js %}
 var NewModel = Backbone.Model.extend({
-	defaults: {
-		name: 'Barry',
-		age: 18
-	}
+  defaults: {
+    name: 'Barry',
+    age: 18
+  }
 });
 var newModel = new NewModel({
-	name: 'Chen',
-	age: 25
+  name: 'Chen',
+  age: 25
 });
 {% endhighlight %}
 
@@ -50,15 +50,15 @@ var newModel = new NewModel({
 
 {% highlight js %}
 var NewCollection = Backbone.Collection.extend({
-	model: NewModel,
-	url: 'api/index.php',
-	parse: function(res) {
-		// get what you want in response
-	}
+  model: NewModel,
+  url: 'api/index.php',
+  parse: function(res) {
+    // get what you want in response
+  }
 });
 var newCollection = new NewCollection([
-	{name: 'Barry', age: 18},
-	{name: 'Chen', age: 25}
+  {name: 'Barry', age: 18},
+  {name: 'Chen', age: 25}
 ]);
 {% endhighlight %}
 
@@ -78,26 +78,26 @@ var newCollection = new NewCollection([
 
 {% highlight js %}
 var NewView = Backbone.View.extend({
-	id: 'app',
-	className: 'page',
-	tagName: 'ul',
-	initialize: function() {
-		this.ListenTo(Backbone, 'toggle', this.toggle);
-	},
-	render: function(data) {
-		var template = _.tempalte($('#temp').html());
-		this.$el.html(template(data));
-		return this;
-	},
-	events: {
-		'click .btn': 'show'
-	},
-	show: function() {
-		this.$el.find('.float').show();
-	},
-	toggle: function() {
-		this.$el.toggleClass('slide');
-	}
+  id: 'app',
+  className: 'page',
+  tagName: 'ul',
+  initialize: function() {
+    this.ListenTo(Backbone, 'toggle', this.toggle);
+  },
+  render: function(data) {
+    var template = _.tempalte($('#temp').html());
+    this.$el.html(template(data));
+    return this;
+  },
+  events: {
+    'click .btn': 'show'
+  },
+  show: function() {
+    this.$el.find('.float').show();
+  },
+  toggle: function() {
+    this.$el.toggleClass('slide');
+  }
 });
 var newView = new NewView;
 newView.render({name: 'Barry Chen'});
@@ -125,35 +125,35 @@ Backbone.trigger('toggle');
 
 {% highlight js %}
 var NewRouter = Backbone.Router.extend({
-	routes: {
-		'':         'index',
-		'search':   'search'
-	},
-	initialize: function() {
-		this.$body = $(document.body);
-	},
-	index: function() {
-		if (!indexView) {
-			indexView  = new IndexView;
-			indexView.render();
-		}
-		// change title show
-		this.$body.html(indexView.el);
-	},
-	search: function() {
-		if (!searchView) {
-			searchView  = new SearchView;
-			searchView.render();
-		}
-		// change title show
-		this.$body.html(searchView.el);
-	}
+  routes: {
+    '':         'index',
+    'search':   'search'
+  },
+  initialize: function() {
+    this.$body = $(document.body);
+  },
+  index: function() {
+    if (!indexView) {
+      indexView  = new IndexView;
+      indexView.render();
+    }
+    // change title show
+    this.$body.html(indexView.el);
+  },
+  search: function() {
+    if (!searchView) {
+      searchView  = new SearchView;
+      searchView.render();
+    }
+    // change title show
+    this.$body.html(searchView.el);
+  }
 });
 var newRouter = new NewRouter;
 Backbone.history.start();
 newRouter.navigate('search', {
-	trigger: true,
-	// repalce: true
+  trigger: true,
+  // repalce: true
 });
 {% endhighlight %}
 
@@ -165,11 +165,11 @@ newRouter.navigate('search', {
 
 {% highlight js %}
 if (typeof define === 'function' && define.amd) {
-	define(['underscore', 'jquery', 'exports'], function(_, $, exports) {
-		// Export global even in AMD case in case this script is loaded with
-		// others that may still expect a global Backbone.
-		root.Backbone = factory(root, exports, _, $);
-	});
+  define(['underscore', 'jquery', 'exports'], function(_, $, exports) {
+    // Export global even in AMD case in case this script is loaded with
+    // others that may still expect a global Backbone.
+    root.Backbone = factory(root, exports, _, $);
+  });
 }
 {% endhighlight %}
 
@@ -177,10 +177,10 @@ if (typeof define === 'function' && define.amd) {
 
 {% highlight js %}
 require.config({
-	baseUrls: './',
-	paths: {
-		'jquery': 'vendor/js/zepto'
-	}
+  baseUrls: './',
+  paths: {
+    'jquery': 'vendor/js/zepto'
+  }
 });
 {% endhighlight %}
 

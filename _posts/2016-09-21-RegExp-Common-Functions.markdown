@@ -11,10 +11,10 @@ categories: record study
 
 {% highlight js %}
 function getQueryString(name) {
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"),
-		r = window.location.search.substr(1).match(reg);
-	if (r != null) return decodeURIComponent(r[2]);
-	return null;
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"),
+    r = window.location.search.substr(1).match(reg);
+  if (r != null) return decodeURIComponent(r[2]);
+  return null;
 }
 {% endhighlight %}
 
@@ -22,10 +22,10 @@ function getQueryString(name) {
 
 {% highlight js %}
 function getCookie(name) {
-	var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)"),
-		r = document.cookie.match(reg);
-	if (r != null) return unescape(r[2]);
-	return null;
+  var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)"),
+    r = document.cookie.match(reg);
+  if (r != null) return unescape(r[2]);
+  return null;
 }
 {% endhighlight %}
 

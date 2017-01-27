@@ -21,15 +21,15 @@ var operateCan = new fabric.Canvas(canvasID);
 
 {% highlight js %}
 var newImage = new fabric.Image(imageUrl, { // imageUrl ==> path or base64
-    width: '', // width, generally canvas's width
-    height: '', // height, generally canvas's height
-    originX: '',  // top, right, bottom or left
-    originY: '', // top, right, bottom or left
-    selectable: , // true or false
-    evented: , // true or false
-    hasControls: , // true or false
-    hasBorders: , // true or false
-    hasRotatingPoint:  // true or false
+  width: '', // width, generally canvas's width
+  height: '', // height, generally canvas's height
+  originX: '',  // top, right, bottom or left
+  originY: '', // top, right, bottom or left
+  selectable: , // true or false
+  evented: , // true or false
+  hasControls: , // true or false
+  hasBorders: , // true or false
+  hasRotatingPoint:  // true or false
 });
 {% endhighlight %}
 
@@ -45,8 +45,8 @@ operateCan.add(newImage);
 
 {% highlight html %}
 <div class="canvas-container">
-    <canvas id="myCanvas" width="547" height="523" class="lower-canvas"></canvas>
-    <canvas class="upper-canvas" width="547" height="523"></canvas>
+  <canvas id="myCanvas" width="547" height="523" class="lower-canvas"></canvas>
+  <canvas class="upper-canvas" width="547" height="523"></canvas>
 </div>
 {% endhighlight %}
 
@@ -67,17 +67,17 @@ operateCan.add(newImage);
 
 {% highlight js %}
 Caman(n, function () { // n ==> id of img or canvas, need #
-    this.brightness(5).render(function(){
+  this.brightness(5).render(function(){
+    // callback function code here
+    // example
+    Caman(n, function() {
+      this.newLayer(function(){
+        this.overlayImage(mask); // mask ==> img dom element
+      }).render(function(){
         // callback function code here
-        // example
-        Caman(n, function() {
-            this.newLayer(function(){
-                this.overlayImage(mask); // mask ==> img dom element
-            }).render(function(){
-                // callback function code here
-            });
-        });
+      });
     });
+  });
 });
 {% endhighlight %}
 
@@ -106,7 +106,7 @@ canvas.setAttribute("data-caman-hidpi-disabled", "true");
 
 {% highlight js %}
 EXIF.getData(document.getElementById('imgElement'), function(){ 
-    EXIF.getTag(this, 'Orientation'); 
+  EXIF.getTag(this, 'Orientation'); 
 }); 
 {% endhighlight %}
 
