@@ -32,7 +32,7 @@
 
 ### 个人技能
 
-| HTMl + CSS | JavaScript | PhotoShop |    Git    |
+| HTML + CSS | JavaScript | PhotoShop |    Git    |
 | :--------: | :--------: | :-------: | :-------: |
 |     88     |     72     |    32     |     64    |
 
@@ -62,4 +62,3 @@
 [8]: https://github.com/Chen38/measurejs
 [9]: https://github.com/Chen38/gulp_campaign
 [10]: https://github.com/Chen38/sublime-config
-
