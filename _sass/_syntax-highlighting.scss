@@ -9,7 +9,8 @@ figure {
     background: #fff;
     // margin: 0;
     @extend %vertical-rhythm;
-
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
     .highlighter-rouge & {
       background-color: rgba(0,0,0,0.04);
       font-family: $code-font-family;
