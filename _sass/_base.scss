@@ -1,4 +1,12 @@
 /**
+ * Reset mobile style
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/**
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
@@ -37,6 +45,7 @@ code {
 
 code {
     padding: 0.2em 0.3em;
+    word-wrap: break-word;
 }
 
 pre {

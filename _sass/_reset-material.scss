@@ -1,0 +1,32 @@
+.mdl-mega-footer--link-list .username,
+.mdl-mega-footer__link-list .username {
+	position: relative;
+	top: 2px;
+	left: 3px;
+}
+
+.mdl-layout__drawer-button {
+	outline: none;
+}
+
+.mdl-layout__container {
+	padding-top: 56px;
+}
+
+.mdl-layout__header {
+	height: 56px;
+  min-height: 56px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.mdl-layout__drawer,
+.mdl-layout__obfuscator {
+	position: fixed;
+	top: 56px;
+}
+
+.mdl-card__supporting-text {
+	padding-bottom: 4px;
+}

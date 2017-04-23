@@ -6,29 +6,26 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: '' # the subpath of your site, e.g. /blog/
 url: 'https://chen38.github.io' # the base hostname & protocol for your site
 # twitter_username: jekyllrb
-github_username:  Chen38
-# google_play: 'GDGX'
-# google_plus_com: '109485346959707049693'  # Community link
-# google_plus_per: '+GDGManagua'  #Personal link
-# facebook_app_id: 12345
+github_username: Chen38
+wechat_username: wx_cyb38
 
 # Layout settings
 header_type: default  # values [ drawer, default ]
 post_type: highlight    # values [ highlight, default ]
 pagination_type: default  # values [ ops, default ]
 
-more_vert:
-  option1:
-    name: Cool Option 1
-    link: www.myawesomelink.com
-  option2:
-    name: Cool Option 2
-    link: www.myawesomelink.com
-  option3:
-    name: Cool Option 3
-    link: www.myawesomelink.com
+# more_vert:
+#   option1:
+#     name: Cool Option 1
+#     link: www.myawesomelink.com
+#   option2:
+#     name: Cool Option 2
+#     link: www.myawesomelink.com
+#   option3:
+#     name: Cool Option 3
+#     link: www.myawesomelink.com
 
-disqus: true
+disqus: false
 disqus_shortname: 'gdgmanagua'
 
 # Build settings

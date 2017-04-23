@@ -17,8 +17,10 @@ $code-font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+	"normalize",
 	"material",
 	"font",
+	"reset-material",
   "base",
   "layout",
   "syntax-highlighting",
