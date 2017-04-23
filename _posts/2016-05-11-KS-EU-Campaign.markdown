@@ -20,7 +20,7 @@ var operateCan = new fabric.Canvas(canvasID);
 #### 然后建立基于它的图片对象：
 
 {% highlight js %}
-var newImage = new fabric.Image(imageUrl, { // imageUrl ==> path or base64
+var newImage = new fabric.Image(imageUrl, { // imageUrl => path or base64
   width: '', // width, generally canvas's width
   height: '', // height, generally canvas's height
   originX: '',  // top, right, bottom or left
@@ -66,13 +66,13 @@ operateCan.add(newImage);
 #### 可以直接对 `img` 或者 `canvas` 进行处理
 
 {% highlight js %}
-Caman(n, function () { // n ==> id of img or canvas, need #
+Caman(n, function () { // n => id of img or canvas, need #
   this.brightness(5).render(function(){
     // callback function code here
     // example
     Caman(n, function() {
       this.newLayer(function(){
-        this.overlayImage(mask); // mask ==> img dom element
+        this.overlayImage(mask); // mask => img dom element
       }).render(function(){
         // callback function code here
       });
@@ -120,7 +120,7 @@ EXIF.getData(document.getElementById('imgElement'), function(){
 
 在这里遇到的问题就是请求微信接口配置的时候，链接没有用对编码方式，导致 `URL` 后面的参数被截掉了，然后配置不成功，无法自定义分享，应该用 `encodeURIComponent()` 方法，我的锅，只能说第一次玩微信这个玩意儿，没有经验。自定义分享里的链接和图片必须使用绝对地址，不然不会生效。其他的步骤官方文档里已经写的非常清楚了，大家看看，百度一下，你就知道。反正微信这个东西还是挺坑的，还好腾讯自己开发一个微信网页开发工具，不然真的连调试都不行了。
 
-## 总结
+### 总结
 
 * 到4月8日为止，整个项目应该才算真正地安稳下来，之前因为客户在上线之后还在不断地提修改意见，服务器又不稳定，经常报错，导致我们也是没办法。然后又是因为微信的原因，不能在测试环境中进行调试再上传正式环境，所以每次都在正式环境做修改，有点慌。改到后来已经不是原来的样子了，真的是不好看了。但是客户喜欢就好，我也没办法。
 

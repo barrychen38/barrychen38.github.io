@@ -1,23 +1,43 @@
+  <header class="mdl-layout__header">
 
-<div class="wrapper whoami">
-  <center>
-    <div class="site-title"><a href="/"> {{site.title}} </a></div>
-  </center>
-</div>
-<!-- <div class="wrapper site-description">
-<center>  {{site.description}} </center>
-</div> -->
-<div class="wrapper">
-  <div class="trigger site-navigation">
-    <a class="page-link" href="/">首页</a>
-    <!-- <span class="exclamationMark">/</span> -->
-    <!-- <a class="page-link" href="/share/">分享</a><span class="exclamationMark">/</span> -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">{{ site.title }}</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      
 
-    {% for sitePage in site.pages %}
-    {% if sitePage.title %}
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable is-upgraded">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="js-search__input">
+          <i class="material-icons">search</i>
+        </label>
 
-    <a class="page-link" href="{{sitePage.url | prepend: site.baseurl }}">{{sitePage.title}}</a><span class="exclamationMark">/</span>
-    {% endif %}
+        <div class="mdl-textfield__expandable-holder" >
+          <input class="mdl-textfield__input super-search__input" type="text" id="js-search__input" />
+        </div>
+      </div>
+
+      <button class="mdl-button mdl-js-button mdl-button--icon" id="menu-lower-left">
+        <i class="material-icons">more_vert</i>
+      </button>
+
+      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu-lower-left">
+        {% for option in site.more_vert %}
+        <li><a href="{{ option[1].link }}" class="mdl-menu__item">{{ option[1].name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+    {% for page in site.pages %}
+      {% if page.title %}
+      <a class="mdl-navigation__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      {% endif %}
     {% endfor %}
+    </nav>
+
   </div>
-</div>
+

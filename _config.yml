@@ -1,19 +1,35 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Barry Chen
-email: spchen38@163.com
-description: console.log("I am Adobe.");
-baseurl: /chen38.github.io
-url: "http://chen38.github.io/"
-weibo_username: Cyb不是葱油饼
-github_username: Chen38
-wechat_username: 葱油饼
+email: funnychen38@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  console.info('I am Adobe.');
+baseurl: '' # the subpath of your site, e.g. /blog/
+url: 'https://chen38.github.io' # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+github_username:  Chen38
+# google_play: 'GDGX'
+# google_plus_com: '109485346959707049693'  # Community link
+# google_plus_per: '+GDGManagua'  #Personal link
+# facebook_app_id: 12345
+
+# Layout settings
+header_type: default  # values [ drawer, default ]
+post_type: highlight    # values [ highlight, default ]
+pagination_type: default  # values [ ops, default ]
+
+more_vert:
+  option1:
+    name: Cool Option 1
+    link: www.myawesomelink.com
+  option2:
+    name: Cool Option 2
+    link: www.myawesomelink.com
+  option3:
+    name: Cool Option 3
+    link: www.myawesomelink.com
+
+disqus: true
+disqus_shortname: 'gdgmanagua'
 
 # Build settings
 markdown: kramdown
