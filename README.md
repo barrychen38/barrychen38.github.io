@@ -1,80 +1,67 @@
-# jekyll-mdl
-> A Jekyll theme based in Google Material Design Lite library.
+## 个人说明
 
-## Demo
+个人博客的说明，虽然不经常更新，但是还是要假装一下。
 
-You can see the online demo here [www.gdgmanagua.org/jekyll-mdl](http://www.gdgmanagua.org/jekyll-mdl)
+博客主题是基于[这个][11]改造过来的，🙏贡献。
 
-![Demo](https://raw.githubusercontent.com/gdg-managua/jekyll-mdl/master/jekyll-mdl-screen.png)
+### 基本信息
 
-## Sites using jekyll-mdl
+* 姓名：陈宇斌 (Barry Chen)
 
-If you are using this cool jekyll theme, please open an issue or fork the project, add your site to the list and send us a pull request, we will be happy to know where the theme has been used.
+* 手机：15757125386
 
-- [prosa100.github.io](http://prosa100.github.io/)
-- [fandekasp.github.io](http://fandekasp.github.io/)
-- [webiphany.com](http://webiphany.com)
-- [siempredelao.github.io](http://siempredelao.github.io/)
-- [sparker0i.github.io](http://sparker0i.github.io/)
+* 邮箱：[spchen38@163.com][1]
 
-## Custom Themes
+* 个人博客：[http://chen38.github.io][2]
 
-If you don't want the default site colors, you can create custom themes for the site in the [mdl theme creator](http://www.getmdl.io/customize/index.html). The site will create a custom css, something like this:
+* GitHub 账号：[Chen38][3]
 
-     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.teal-green.min.css" />
+* 现居住地：上海
 
-Now add this in the _includes/head.html file, under the main css and enjoy your new theme.
+### 工作经历
 
-## Post Options
+> 2015/07/02 - 2015/11/29
 
-All the post, require an image and maybe an author and declare if the post is highlighted or not, the image are used in the cards and the autor used for the footer in the cards, the highlighted post is used for make this 12 cols and not a card, if you want to use the custom images and set the author and the highlight post, just add a new key in the post config, something like this:
+在杭州一家创业公司实习，职位前端实习生。公司主要业务是做电商网站，我的主要工作是先学习响应式布局和组件的编写，之后有写一个响应式的招聘模版，全部都是静态页面，现在想来真的是太差了。之后也是因为看到公司的潜力不大，而且运营困难，辞职去寻找更广阔的天地。
 
-    ---
-    layout: post
-    title:  "Welcome to jekyll-mdl"
-    date:   2015-07-11 11:34:20
-    categories: jekyll
-    highlight: true
-    image: http://www.wchs4pets.org/wp-content/uploads/2015/03/cat_1-jpg.jpg
-    author: Google Developers Group Managua
-    ---
+> 2015/11/02 - 2016/06/30
 
-## Layout Configuration
-You can setup 4 types of layout
+之后一个人去了上海，来到一家广告公司 [(Nurun)][4]，职位前端实习生。公司主要卖设计，所以妹子多，以至于老板特别喜欢设计，开发这块没有很多兴趣，关键也是不太懂。公司的客户还是比较大头的，欧莱雅是其中之一，所以进去的第一个任务是 `EDM` 和 `Landing Page` 的代码编写，差不多就是电商网站维护和更新吧。之后做了公司一些小 `Campaign`，基本上都是 `H5`，偶尔也会写点 `PC` 端的静态页面，兼容下 `IE8` 什么的。
 
-- Fixed Nav + Simple Card Grid
-- Fixed Nav + Highlight Post + Card Grid
-- Drawer Nav + Simple Card Grid
-- Drawer Nav + Highlight Post + Card Grid
+> 2015/07/02 - 至今
 
-For use this in the [_config.yml](https://github.com/gdg-managua/jekyll-mdl/blob/master/_config.yml) select the type of layout, rebuild the website and voilà :smile:
+之后就留在了这家公司，职位前端工程师，虽然说薪资不高，但是留下来也有理由。一是绝对的自由，空余时间可以学习东西；二是有一个足够好的 `Leader`；三是办公室环境是我理想之中的；四是妹子足够多，接个 `Campaign` 可以结识一下 `Creative` 和 `Account` 的妹子[偷笑]。所以目前的状态就是做公司里的项目，空余时间自己学习。
 
-## Contributing
-If you want to contribute to this project, please read the [CONTRIBUTING](https://github.com/gdg-managua/jekyll-mdl/blob/master/CONTRIBUTING.md) file and perform the following steps
+### 个人技能
 
-    # Fork this repository
-    # Clone your fork
-    jekyll serve --watch
+| HTML + CSS | JavaScript | PhotoShop |    Git    |
+| :--------: | :--------: | :-------: | :-------: |
+|     88     |     72     |    32     |     64    |
 
-    git checkout -b feature_branch
-    # Implement your feature and tests
-    git add . && git commit
-    git push -u origin feature_branch
-    # Send a pull request for your feature branch
+作为一名前端工程师[小学生]，无非是这三块东西，所以我合并在了一起，比较清晰。最关键的还是围绕 `JavaScript` 这个展开的，什么自动化工具啊框架啊，所以这个学好很重要。
 
-## Team
-[![Oscar Cortez](https://avatars.githubusercontent.com/u/2553459?v=3&s=100)](http://github.com/oscarmcm) | [![Byron Corrales](https://avatars.githubusercontent.com/u/99616?v=3&s=100)](https://github.com/byroncorrales)
----|---
-[Oscar Cortez](http://github.com/oscarmcm) | [Byron Corrales](https://github.com/byroncorrales)
-Project Lead | Contributor
+![我就是我][5]
 
-## License
-Licensed under the Apache 2.0 license.
+### 兴趣爱好
 
-See the [LICENSE](https://github.com/gdg-managua/jekyll-mdl/blob/master/LICENSE.md) file for more details.
+看电影听音乐是休闲，篮球是热爱，跑步是健身，`UKULELE` 是撩妹，不想旅游是真的没钱。
 
-Copyright © 2015 [Google Developers Group Managua](http://www.gdgmanagua.org).
+### 自我总结
 
+目前是在移动端做的开发比较多，所以自身学习和接触到的都是比较新的东西，这点还是蛮好的，至少可以跟上前端的开发潮流。所以每天刷[掘金][6]的我实时关注最新动态，这个爱屁屁还是不错的，推荐大家。现阶段主要是学习 `NodeJS` 以及一些 `MV*` 的框架，都上手一下，对于对应的开发框架的了解还是有一定好处的。所以自己写了[聊天][7]的小玩意儿，性能不是特别好，还要改进。然后写了一个没啥用的[小插件][8]，也是一种锻炼吧。中途也学习了 `Gulp` 自动化工具，`bower` 的库管理工具，于是乎有了自己的[配置][9]。开发工具还是忠于 `Sublime Text`，轻量优雅完美，所以渐渐的有了一个完整的[设置][10]，这些纯属个人喜好，大家可以参考。
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gdg-managua/jekyll-mdl/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+希望以后的时间里，自己能有更好的突破，不要老是想着看毛片，多学点真本事才能赚大钱，才能有妹子啊！
 
+<!-- links -->
+
+[1]: mailto:spchen38@163.com
+[2]: https://chen38.github.io
+[3]: https://github.com/Chen38
+[4]: http://www.nurun.com/en/
+[5]: /img/iam.jpg
+[6]: https://gold.xitu.io/
+[7]: https://github.com/Chen38/nodejs_chat-room
+[8]: https://github.com/Chen38/measurejs
+[9]: https://github.com/Chen38/gulp_campaign
+[10]: https://github.com/Chen38/sublime-config
+[11]: https://github.com/gdg-managua/jekyll-mdl
