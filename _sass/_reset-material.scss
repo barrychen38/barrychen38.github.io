@@ -9,17 +9,10 @@
 	outline: none;
 }
 
-.mdl-layout__container {
-	padding-top: 56px;
-}
-
-.mdl-layout__header {
+.mdl-layout__header,
+.mdl-layout__header-row {
 	height: 56px;
-  min-height: 56px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 999;
+	min-height: 56px;
 }
 
 .mdl-layout__drawer,
@@ -30,4 +23,16 @@
 
 .mdl-card__supporting-text {
 	padding-bottom: 4px;
+}
+
+@media screen and (min-width: 1025px) {
+	.mdl-layout__drawer-button {
+		line-height: 48px;
+	}
+}
+
+@media screen and (max-width: 641px) {
+	.mdl-mega-footer--middle-section {
+		display: none;
+	}
 }
