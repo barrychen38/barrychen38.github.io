@@ -135,5 +135,5 @@ EXIF.getData(document.getElementById('imgElement'), function(){
 * 第一次做项目总结，也可能还是会遗漏一些东西，写的可能也不是太清楚明白，来看的就将就一下，多看看官方文档，多 `Google`，多 `StackOverflow`，大神还是会存在拯救你的。
 
 {% highlight js %}
-console.info("I am Adobe.");
+console.info('I am Adobe.');
 {% endhighlight %}

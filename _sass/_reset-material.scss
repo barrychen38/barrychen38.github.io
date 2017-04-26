@@ -1,3 +1,12 @@
+.mdl-layout__container {
+	position: relative;
+	height: auto;
+}
+
+.mdl-layout {
+	overflow-y: visible;
+}
+
 .mdl-mega-footer--link-list .username,
 .mdl-mega-footer__link-list .username {
 	position: relative;
@@ -7,6 +16,10 @@
 
 .mdl-layout__drawer-button {
 	outline: none;
+}
+
+.mdl-layout__content {
+	overflow-y: visible;
 }
 
 .mdl-layout__header,
