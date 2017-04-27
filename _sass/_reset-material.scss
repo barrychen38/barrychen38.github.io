@@ -38,6 +38,10 @@
 	padding-bottom: 4px;
 }
 
+.mdl-layout__drawer .mdl-navigation {
+	padding-top: 0;
+}
+
 @media screen and (min-width: 1025px) {
 	.mdl-layout__drawer-button {
 		line-height: 48px;
