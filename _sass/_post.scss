@@ -24,7 +24,7 @@
   .post-section {
     border-radius: 2px;
     padding: 40px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 
     h3 {
       margin-top: 24px;
@@ -39,4 +39,34 @@
       height: auto;
     }
   }
+}
+
+.bread-curmbs {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  
+  .mdl-cell--10-col {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    p {
+      margin-bottom: 0;
+      -webkit-flex-basis: 33.333333%;
+      -ms-flex-basis: 33.333333%;
+      flex-basis: 33.333333%;
+      &:nth-child(1) {
+        text-align: left;
+      }
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+    }
+  }
+  
 }

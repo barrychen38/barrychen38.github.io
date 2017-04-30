@@ -23,3 +23,20 @@ layout: default
     </div>
   </div>
 </main>
+
+<div class="bread-curmbs mdl-grid">
+  <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+  <div class="mdl-cell mdl-cell--10-col">
+    {% if page.previous %}
+    <p><a href="{{ page.previous.url }}" class="prev-btn">Previous</a></p>
+    {% else %}
+    <p></p>
+    {% endif %}
+    <p><a href="/" class="home">Home</a></p>
+    {% if page.next %}
+    <p><a href="{{ page.next.url }}" class="next-btn">Next</a></p>
+    {% else %}
+    <p></p>
+    {% endif %}
+  </div>
+</div>
