@@ -2,7 +2,7 @@
 layout: post
 title:  "用于取参数的正则匹配函数"
 date:   2016-09-21 10:48:37 +0800
-categories: record study
+categories: Record Study
 ---
 
 主要整理了一些用于取出参数的正则匹配函数，希望对大家有用。

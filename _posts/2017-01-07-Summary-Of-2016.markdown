@@ -2,7 +2,7 @@
 layout: post
 title:  "Summary Of 2016"
 date:   2017-01-07 13:51:12 +0800
-categories: summary
+categories: Summary
 ---
 
 2016年已经过去了，发现自己也已经正式踏入前端这个行业快两年了，当然包括自学和实习在内。也是时候给自己一个小小的总结了。人嘛，要善于总结。

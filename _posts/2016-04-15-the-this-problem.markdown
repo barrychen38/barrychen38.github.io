@@ -2,7 +2,7 @@
 layout: post
 title:  "The this problem in Javascript"
 date:   2016-04-15 15:42:17 +0800
-categories: jekyll update
+categories: Record Study
 ---
 
 When it comes to `this`, you have to mention `function`. Due to the different call `function` objects, leading to the different points of `this`. `function` is also an object that needs to be performed in a particular environment. Figure out the two most common methods of `function` you can basically understand the use of `this`.
