@@ -9,5 +9,5 @@ permalink: /about/
 之后想清楚了再来填补一下。
 
 {% highlight js %}
-console.log('I am Adobe.');
+console.info('I am Adobe.');
 {% endhighlight %}

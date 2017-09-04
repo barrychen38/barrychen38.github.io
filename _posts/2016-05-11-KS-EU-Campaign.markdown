@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KS_EU_Campaign"
+title:  "KS EU Campaign"
 date:   2016-05-11 22:23:17 +0800
 categories: Record Study
 ---
@@ -57,7 +57,7 @@ operateCan.add(newImage);
 * 一定要设置 `canvas` 的 `width` 和 `height` ，因为 `canvas` 里面还是以像素为单位来操作的，与样式里的 `width` 和 `height` 一样数值。否则上传进去的图片不会以原始尺寸显示，不相信可以设置试一下。
 
 * 如果直接使用它的源码貌似是无法进行移动操作的，[官网](http://fabricjs.com/build/)上可以 `Custom Build` ，需要配合 `Event.js` 来使用。
- 
+
 其他的看文档就好，我也只是用了其中的一点点功能而已，还有更多的功能等待你们去发现吧。总的来说这个插件还是强大的。
 
 ### [Caman.js](https://github.com/meltingice/CamanJS/)
@@ -105,9 +105,9 @@ canvas.setAttribute("data-caman-hidpi-disabled", "true");
 具体用法如下：
 
 {% highlight js %}
-EXIF.getData(document.getElementById('imgElement'), function(){ 
-  EXIF.getTag(this, 'Orientation'); 
-}); 
+EXIF.getData(document.getElementById('imgElement'), function(){
+  EXIF.getTag(this, 'Orientation');
+});
 {% endhighlight %}
 
 这样就能读取图片的 `Orientation` 属性，一般可以放在一个变量里面，方便后面的操作。还有很多属性可以去看官方文档，我只是用到其中的一个方法。

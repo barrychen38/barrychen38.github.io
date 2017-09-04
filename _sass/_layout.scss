@@ -80,3 +80,9 @@
     right: 8px;
   }
 }
+
+@media screen and (max-width: 641px) {
+	.based {
+		display: none;
+	}
+}

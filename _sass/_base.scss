@@ -38,7 +38,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 12px;
+    font-size: pre, code;
     // border: 1px solid $grey-color-light;
     border-radius: 3px;
 }
@@ -62,6 +62,7 @@ pre {
         padding-right: 0;
         padding-left: 0;
         font-family: $code-font-family;
+        font-size: 12px;
     }
 }
 
@@ -89,7 +90,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $footer-color;
         }
     }
 }

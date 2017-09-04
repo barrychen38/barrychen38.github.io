@@ -10,9 +10,9 @@
 
 * 手机：15757125386
 
-* 邮箱：[spchen38@163.com][1]
+* 邮箱：[funnychen38@gmail.com][1]
 
-* 个人博客：[http://chen38.github.io][2]
+* 个人博客：[https://chen38.github.io][2]
 
 * GitHub 账号：[Chen38][3]
 
@@ -54,7 +54,7 @@
 
 <!-- links -->
 
-[1]: mailto:spchen38@163.com
+[1]: mailto:funnychen38@gmail.com
 [2]: https://chen38.github.io
 [3]: https://github.com/Chen38
 [4]: http://www.nurun.com/en/

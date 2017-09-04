@@ -13,6 +13,7 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 $code-font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+$footer-color:     hsla(0, 0, 100%, .87);
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

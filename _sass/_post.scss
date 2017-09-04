@@ -5,7 +5,10 @@
 .post-ribbon {
   width: 100%;
   height: 40vh;
-  background-color: #DDDDDD;
+  // background-color: #DDDDDD;
+  background-image: url('/img/welcome_card.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   flex-shrink: 0;
 }
 
@@ -44,7 +47,7 @@
 .bread-curmbs {
   max-width: 1600px;
   width: calc(100% - 16px);
-  
+
   .mdl-cell--10-col {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -68,5 +71,31 @@
       }
     }
   }
-  
+
+}
+
+/**
+ * Reset post layout
+ */
+@media screen and (max-width: 641px) {
+	.post-ribbon {
+		display: none;
+	}
+	.post-main {
+		margin-top: 0;
+		.post-section {
+			padding: 40px 20px;
+			width: 100%;
+			box-shadow: none;
+		}
+		.post-container {
+			width: 100%;
+		}
+	}
+	// .mdl-cell {
+	// 	margin: 0;
+	// }
+	.mdl-grid {
+		padding: 0;
+	}
 }

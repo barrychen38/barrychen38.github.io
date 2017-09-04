@@ -42,6 +42,15 @@
 	padding-top: 0;
 }
 
+.mdl-mega-footer {
+	color: $footer-color;
+	background-color: #3f51b5;
+}
+
+.mdl-logo {
+	color: $footer-color;
+}
+
 @media screen and (min-width: 1025px) {
 	.mdl-layout__drawer-button {
 		line-height: 48px;
