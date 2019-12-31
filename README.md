@@ -57,13 +57,13 @@
 <!-- links -->
 
 [1]: mailto:funnychen@outlook.com
-[2]: https://chen38.github.io
-[3]: https://github.com/Chen38
+[2]: https://barrychen38.github.io
+[3]: https://github.com/barrychen38
 [4]: http://www.nurun.com/en/
 [5]: /img/iam.jpg
 [6]: https://gold.xitu.io/
-[7]: https://github.com/Chen38/nodejs_chat-room
-[8]: https://github.com/Chen38/measurejs
-[9]: https://github.com/Chen38/gulp_campaign
-[10]: https://github.com/Chen38/sublime-config
+[7]: https://github.com/barrychen38/chatroom
+[8]: https://github.com/barrychen38/measurejs
+[9]: https://github.com/barrychen38/gulp-starter
+[10]: https://github.com/barrychen38/sublime-config
 [11]: https://github.com/gdg-managua/jekyll-mdl

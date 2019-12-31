@@ -12,11 +12,11 @@ When it comes to `this`, you have to mention `function`. Due to the different ca
 * ##### `apply` method: Can hijack another object method, inherited property of another object
 
 	`Function.apply(obj,args)`
-    
+
 	`obj`: this object will replace the `this` object in the `Function` class
-    
+
 	`args`: this is an Array, it will be passed as a parameter `Function(args-->arguments)`
-	
+
 {% highlight js %}
 function Person(name,age) {
   this.name = name;
@@ -26,30 +26,30 @@ function Student(name,age,sex) {
   Person.apply(this,arguments);
   this.sex = sex;
 }
-var student = new Student("chen38",22,"man");
+var student = new Student("barrychen38",22,"man");
 console.log("name:" + student.name + " age:" + student.age + " sex:" + student.sex);
-//=> name:chen38 age:22 sex:man
+//=> name:barrychen38 age:22 sex:man
 {% endhighlight %}
-	
+
 * ##### `call` method: have the same meaning with `apply`, but it is not the same parameter list
-	
+
 	`Function.call(obj,[param1[,param2[,…[,paramN]]]])`
-        
+
     `obj`: this object will replace the `this` object in the `Function` class
-    
+
     `params`: this is a parameter list
-    
+
 {% highlight js %}
 function print(word) {
   console.log(this + word);
 }
 print.call("Hello ", "World!"); //=> Hello World!
 {% endhighlight %}
-    
+
 Generally speaking, `functionName(arg)` can be directly replaced by `functionName.call(window, arg)`, this makes it clear where the various parameters are pointing
-    
+
 Anonymous function is the same as the substitution method:
-    
+
 {% highlight js %}
 (function(name){
   console.log(name);
@@ -59,43 +59,43 @@ Anonymous function is the same as the substitution method:
   console.log(name);
 }).call(window, "Hello");
 {% endhighlight %}
-    
+
 The function is called as the object's property is different:
-   
+
 {% highlight js %}
 var person = {
-  name: "chen38",
+  name: "barrychen38",
   sex: function(sex) {
     console.log(this.name + " is " + sex);
   }
 };
-person.sex("man"); //=> chen38 is man
+person.sex("man"); //=> barrychen38 is man
 // equivalent to
-person.sex.call(person, "man"); //=> chen38 is man
+person.sex.call(person, "man"); //=> barrychen38 is man
 {% endhighlight %}
 
 When using the `call` method here, `this` points to the object itself.
-    
+
 `call` method can also be used for constructors:
-   
+
 {% highlight js %}
-function Person(name) {  
+function Person(name) {
   this.name = name;
 }
-var obj = new Person("chen38");
-console.log(obj.name); //=> chen38
+var obj = new Person("barrychen38");
+console.log(obj.name); //=> barrychen38
 {% endhighlight %}
 
 The key is to understand the `new` operator (not explained in detail):
-    
+
 {% highlight js %}
 var obj = {};
 obj.__proto__ = Person.prototype;
 Person.call(obj);
 {% endhighlight %}
-    
+
 From above we can figure out `this` method:
-   
+
 {% highlight js %}
 functionName(arg) => functionName.call(window, arg)
 {% endhighlight %}

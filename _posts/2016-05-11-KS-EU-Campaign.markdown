@@ -112,7 +112,7 @@ EXIF.getData(document.getElementById('imgElement'), function(){
 
 这样就能读取图片的 `Orientation` 属性，一般可以放在一个变量里面，方便后面的操作。还有很多属性可以去看官方文档，我只是用到其中的一个方法。
 
-### [rem.js](https://github.com/Chen38/rem.js)
+### [rem.js](https://github.com/barrychen38/rem.js)
 我把这个文件上传到了自己的主页上面，感觉有点不要脸的样子，但是自己以后总是会用到的，大家有用没有的，不要抨击极好。
 
 ### [WeChat JSSDK](http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html)
